@@ -6,9 +6,6 @@ public class XMLHandler {
         this.filepath = filepath;
     }
 
-    public void load() {
-
-    }
 
     public Deck loadDeck() {
         return new Deck("dfsd");
