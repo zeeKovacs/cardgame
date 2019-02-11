@@ -21,6 +21,7 @@ public class GameRound {
     }
 
     public void run() {
+        ui.startRound(players);
         pc.setKey(ui.statToCompare(players.get(0).getNextCard()));
         List<Player> ranks = new ArrayList<>();
         for (Player player : players) {
@@ -30,7 +31,9 @@ public class GameRound {
         Player winner = ranks.get(ranks.size() - 1);
         ranks.remove(winner);
         for (Player p : ranks) {
-            p.getHand().next();
+            winner.addCard(p.getHand().next());
         }
+        winner.addCard(winner.getHand().next());
+        ui.endRound(winner);
     }
 }

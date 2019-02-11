@@ -54,4 +54,14 @@ public class UI {
             System.out.println(i + ". " + list.get(i - 1));
         }
     }
+
+    void startRound(List<Player> players) {
+        for (Player p : players) {
+            System.out.println(p.getName() + p.getHandSize());
+        }
+    }
+
+    void endRound(Player winner) {
+        System.out.println(winner.getName() + " has won the round.");
+    }
 }
