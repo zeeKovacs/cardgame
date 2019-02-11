@@ -91,8 +91,10 @@ public class XMLHandler {
         try {
             docBuilder = fac.newDocumentBuilder();
             document = docBuilder.parse(new File(filepath));
-        } catch (ParserConfigurationException | SAXException | IOException e) {
+        } catch (ParserConfigurationException | SAXException e) {
             throw new XMLLoadError();
+        } catch (IOException e) {
+            throw new XMLLoadError("Wrong filepath: " + filepath);
         }
     }
 }

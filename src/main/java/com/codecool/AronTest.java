@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class AronTest {
     public static void main(String[] args) {
-        XMLHandler handler = new XMLHandler("../src/data/cards_example.xml");
+        XMLHandler handler = new XMLHandler("src/data/cards_example.xml");
         try {
             handler.load();
             Deck deck = handler.getDeck();
