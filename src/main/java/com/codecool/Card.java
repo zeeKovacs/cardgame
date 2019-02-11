@@ -33,4 +33,9 @@ public class Card {
     public Map<String, Integer> getAllStatistic() {
         return stats;
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }
