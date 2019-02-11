@@ -38,4 +38,8 @@ public class Card {
         }
         return toPrint;
     }
+
+    public String getAllStatistic() {
+        return "test card";
+    }
 }
