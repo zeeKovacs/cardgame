@@ -6,12 +6,18 @@ public class CardComparator implements Comparator<Card> {
 
     private String key;
 
+    CardComparator() {}
+
     CardComparator(String key) {
         this.key = key;
     }
 
     void setKey(String key) {
         this.key = key;
+    }
+
+    String getKey() {
+        return this.key;
     }
 
     @Override
