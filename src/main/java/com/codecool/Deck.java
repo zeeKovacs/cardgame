@@ -7,13 +7,8 @@ import java.util.List;
 
 public class Deck implements Iterator<Card> {
 
-    private String type;
     private List<Card> deck = new ArrayList<>();
 
-
-    public Deck(String deckType) {
-        type = deckType;
-    }
 
     protected void shuffle() {
         Collections.shuffle(deck);

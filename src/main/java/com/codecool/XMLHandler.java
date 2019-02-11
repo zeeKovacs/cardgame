@@ -37,7 +37,7 @@ public class XMLHandler {
         Set<String> fields = gameData.getFieldIds();
 
         NodeList docCardList = document.getElementsByTagName("Card");
-        deck = new Deck("Test Deck");
+        deck = new Deck();
         for (int i = 0; i < docCardList.getLength(); i++) {
             Element docCard = (Element) docCardList.item(i);
             int id = Integer.parseInt(docCard.getAttribute("id"));

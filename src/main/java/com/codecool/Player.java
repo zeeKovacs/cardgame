@@ -1,6 +1,7 @@
 package com.codecool;
 
 
+
 public class Player {
 
     String name;
@@ -8,6 +9,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
+        hand = new Deck();
     }
 
     public String getName() {
