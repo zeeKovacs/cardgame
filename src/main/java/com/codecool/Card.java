@@ -38,8 +38,4 @@ public class Card {
         }
         return toPrint;
     }
-
-    public Map getAllStatistic() {
-        return stats;
-    }
 }
