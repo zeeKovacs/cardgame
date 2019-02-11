@@ -3,6 +3,7 @@ package com.codecool;
 import java.util.List;
 
 public class GameRound {
+
     private UI ui;
     private List<Player> players;
     private GameData gameData;

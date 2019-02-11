@@ -23,6 +23,10 @@ public class Player {
     }
 
     public Card getNextCard() {
-        return hand.next();
+        return hand.getDeck().get(getHandSize()-1);
+    }
+
+    public Deck getHand() {
+        return hand;
     }
 }
