@@ -3,6 +3,7 @@ package com.codecool;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -28,8 +29,12 @@ public class XMLHandler {
         } catch (ParserConfigurationException | SAXException | IOException e) {
             throw new XMLLoadError();
         }
-        Node docCards = doc.getElementsByTagName("Cards").item(0);
-        
+        NodeList docCardList = doc.getElementsByTagName("Card");
+
+        for (int i = 0; i < docCardList.getLength(); i++ ){
+            Element card = (Element)docCardList.item(i);
+            System.out.println(card);
+        }
 
 
         return new Deck("dfsd");
