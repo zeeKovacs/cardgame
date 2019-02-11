@@ -49,7 +49,10 @@ public class GameController {
     }
 
     private void startGame() {
-
+        GameRound gameRound = new GameRound(ui);
+        while (gameRound.gameRuns()) {
+            gameRound.run();
+        }
     }
 
     private void addPlayer(int serial) {
