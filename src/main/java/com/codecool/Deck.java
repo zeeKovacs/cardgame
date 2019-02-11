@@ -7,8 +7,8 @@ import java.util.List;
 
 public class Deck implements Iterator<Card> {
 
-    String type;
-    List<Card> deck = new ArrayList<>();
+    private String type;
+    private List<Card> deck = new ArrayList<>();
 
 
     public Deck(String deckType) {

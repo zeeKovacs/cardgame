@@ -10,6 +10,19 @@ public class GameController {
     private XMLHandler reader;
     private List<Player> players = new ArrayList<>();
     private UI ui = new UI();
+    private GameData gameData;
+
+    public Deck getDeck() {
+        return deckOnTable;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public GameData getGameData() {
+        return gameData;
+    }
 
     public void mainMenu() {
         ui.printMainMenu();
@@ -25,8 +38,10 @@ public class GameController {
 
     private void initialize() {
         String deckType = ui.getDeckType(getDeckNames());
-        reader = new XMLHandler(deckType + ".xml"); // need to check if valid
-        deckOnTable = new Deck(deckType);
+        reader = new XMLHandler("src/data/" + deckType + ".xml");
+        reader.load();
+        deckOnTable = reader.getDeck();
+        gameData = reader.getGameData();
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {
             addPlayer(i + 1);
@@ -43,13 +58,13 @@ public class GameController {
     }
 
     private List<String> getDeckNames() {
-        File folder = new File("PATH NEEDED!!!"); // !!!!!!!!!!!!!!!!
+        File folder = new File("src/data/");
         File[] listOfFiles = folder.listFiles();
         List<String> fileNames = new ArrayList<>();
 
         for (File file : listOfFiles) {
             if (file.isFile()) {
-                fileNames.add(file.getName());
+                fileNames.add(file.getName().replace(".xml", ""));
             }
         }
         return fileNames;
