@@ -10,4 +10,8 @@ public class XMLHandler {
 
     }
 
+    public Deck loadDeck() {
+        return new Deck("dfsd");
+    }
+
 }

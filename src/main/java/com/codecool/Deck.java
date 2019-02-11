@@ -7,11 +7,10 @@ public class Deck implements Iterator {
 
     String type;
     List<Card> deck;
-    XMLHandler reader;
 
-    public Deck(String filePath, String deckType) {
-        reader = new XMLHandler(filePath);
-        deck = reader.loadDeck();
+
+    public Deck(String deckType) {
+
         type = deckType;
     }
 
