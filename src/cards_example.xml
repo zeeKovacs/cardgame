@@ -1,6 +1,5 @@
 <Card_set>
-    <Data name="Trial of Tyrants" type_singular="Dictator" type_plural="Dictators">
-    </Data>
+    <Data name="Trial of Tyrants" type_singular="Dictator" type_plural="Dictators"/>
     <Cards>
         <Card id="0" name="Dezső">
             <Cruelty val="67"/>
