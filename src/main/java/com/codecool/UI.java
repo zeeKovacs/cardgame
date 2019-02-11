@@ -4,7 +4,11 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class UI {
-    String input;
+    private String input;
+
+    public void printMainMenu() {
+        System.out.println("Welcome to XYZ Card Game.\nPress 'S' to start or 'X' to exit!" );
+    }
 
     String getDeckType() {
         System.out.println("Please select a deck type.");
@@ -31,12 +35,6 @@ public class UI {
     private void arrPrinter(String[] array) {
         for (int i = 1; i < array.length + 1; i++) {
             System.out.println(i + ". " + array[i - 1]);
-        }
-    }
-
-    private void mapPrinter(Map<String, Integer> map) {
-        for (String key : map.keySet()) {
-            System.out.println(key + map.get(key));
         }
     }
 }
