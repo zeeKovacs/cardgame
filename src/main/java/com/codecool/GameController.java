@@ -12,17 +12,6 @@ public class GameController {
     private UI ui = new UI();
     private GameData gameData;
 
-    public Deck getDeck() {
-        return deckOnTable;
-    }
-
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public GameData getGameData() {
-        return gameData;
-    }
 
     public void mainMenu() {
         ui.printMainMenu();
@@ -30,6 +19,7 @@ public class GameController {
         switch (userInput) {
             case "s":
                 initialize();
+                handCards();
                 startGame();
             case "x":
                 System.exit(1);
@@ -41,6 +31,7 @@ public class GameController {
         reader = new XMLHandler("src/data/" + deckType + ".xml");
         reader.load();
         deckOnTable = reader.getDeck();
+        deckOnTable.shuffle();
         gameData = reader.getGameData();
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {
@@ -48,8 +39,16 @@ public class GameController {
         }
     }
 
+    private void handCards() {
+        while (deckOnTable.hasNext()) {
+            for (Player player : players) {
+                player.addCard(deckOnTable.next());
+            }
+        }
+    }
+
     private void startGame() {
-        GameRound gameRound = new GameRound(ui);
+        GameRound gameRound = new GameRound(ui, players, gameData);
         while (gameRound.gameRuns()) {
             gameRound.run();
         }
