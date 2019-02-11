@@ -30,12 +30,12 @@ public class Card {
         return stats.get(key);
     }
 
-    public Map<String, Integer> getAllStatistic() {
-        return stats;
-    }
-
     @Override
     public String toString() {
-        return "";
+        String toPrint = String.format("%-20s (%s)", name, id);
+        for (String key : stats.keySet()) {
+            toPrint += String.format("\n%-20s = %s" , key, stats.get(key));
+        }
+        return toPrint;
     }
 }
