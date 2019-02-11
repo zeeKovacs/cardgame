@@ -49,7 +49,7 @@ public class GameController {
     }
 
     private void startGame() {
-        GameRound gameRound = new GameRound(ui);
+        GameRound gameRound = new GameRound(ui, players, gameData);
         while (gameRound.gameRuns()) {
             gameRound.run();
         }
