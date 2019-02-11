@@ -14,6 +14,10 @@ public class Player {
         return name;
     }
 
+    public void addCard(Card card) {
+        hand.addCard(card);
+    }
+
     public int getHandSize() {
         return hand.getDeck().size();
     }
