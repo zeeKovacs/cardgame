@@ -33,11 +33,12 @@ public class XMLHandler {
 
         for (int i = 0; i < docCardList.getLength(); i++ ){
             Element card = (Element)docCardList.item(i);
-            System.out.println(card);
+            System.out.println(card.);
         }
 
 
         return new Deck("dfsd");
     }
+    
 
 }
