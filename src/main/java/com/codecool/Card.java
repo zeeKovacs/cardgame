@@ -3,7 +3,7 @@ package com.codecool;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Card {
+public class Card implements Comparable{
 
     int id;
     private String name;
@@ -37,5 +37,10 @@ public class Card {
             toPrint += String.format("\n%-20s = %s" , key, stats.get(key));
         }
         return toPrint;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
