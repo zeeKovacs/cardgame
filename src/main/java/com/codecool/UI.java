@@ -11,7 +11,7 @@ public class UI {
 
     }
 
-    public void printStartMenu() {
+    public void printStartGameMenu() {
 
     }
 
