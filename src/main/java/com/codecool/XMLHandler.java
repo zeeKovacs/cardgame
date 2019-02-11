@@ -32,7 +32,6 @@ public class XMLHandler {
     }
 
     public void load() throws XMLLoadError {
-
         getDocument();
         loadGameData();
         Set<String> fields = gameData.getFieldIds();
