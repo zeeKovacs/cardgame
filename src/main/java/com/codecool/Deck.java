@@ -23,7 +23,7 @@ public class Deck implements Iterator {
     @Override
     public Card next() {
         Card nextCard = deck.get(deck.size()-1);
-        deck.remove(deck.get(deck.size()-1));
+        deck.remove(nextCard);
         return nextCard;
     }
 }
