@@ -1,8 +1,24 @@
 package com.codecool;
 
-import java.util.List;
 
 public class Player {
 
-    List<Card> hand;
+    String name;
+    Deck hand;
+
+    public Player(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHandSize() {
+        return hand.getDeck().size();
+    }
+
+    public Card getNextCard() {
+        return hand.next();
+    }
 }
