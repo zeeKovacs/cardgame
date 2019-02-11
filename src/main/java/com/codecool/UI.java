@@ -1,27 +1,22 @@
 package com.codecool;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class UI {
     private String input;
 
     public void printMainMenu() {
-        System.out.println("Welcome to XYZ Card Game.\nPress 'S' to start or 'X' to exit!" );
+        System.out.println("Welcome to XYZ Card Game.\nPress 'S' to start or 'X' to exit!");
 
     }
 
-    public void printStartGameMenu() {
-
-    }
-
-    String getDeckType() {
+    String getDeckType(List<String> deckTypes) {
         System.out.println("Please select a deck type.");
-        // getter to see what XML filed do we have - returns an array
-        String[] deckTypes = {"Dictators", "Goats", "Wardrobes"};
-        arrPrinter(deckTypes);
+        listPrinter(deckTypes);
         input = getInput();
         // input is within the range of 0 and deckTypes.length
-        return deckTypes[Integer.parseInt(input) - 1];
+        return deckTypes.get(Integer.parseInt(input) - 1);
     }
 
     String createPlayer(int serial) {
@@ -51,6 +46,12 @@ public class UI {
     private void arrPrinter(String[] array) {
         for (int i = 1; i < array.length + 1; i++) {
             System.out.println(i + ". " + array[i - 1]);
+        }
+    }
+
+    private void listPrinter(List list) {
+        for (int i = 1; i < list.size() + 1; i++) {
+            System.out.println(i + ". " + list.get(i - 1));
         }
     }
 }
