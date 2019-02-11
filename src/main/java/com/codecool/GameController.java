@@ -2,10 +2,9 @@ package com.codecool;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-public class GameController implements Comparator {
+public class GameController {
 
     private Deck deckOnTable;
     private XMLHandler reader;
@@ -69,10 +68,5 @@ public class GameController implements Comparator {
             }
         }
         return fileNames;
-    }
-
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
     }
 }
