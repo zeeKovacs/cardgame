@@ -39,7 +39,7 @@ public class Card {
         return toPrint;
     }
 
-    public String getAllStatistic() {
-        return "test card";
+    public Map getAllStatistic() {
+        return stats;
     }
 }
