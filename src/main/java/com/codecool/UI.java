@@ -11,6 +11,10 @@ public class UI {
 
     }
 
+    public void printStartMenu() {
+
+    }
+
     String getDeckType() {
         System.out.println("Please select a deck type.");
         // getter to see what XML filed do we have - returns an array
