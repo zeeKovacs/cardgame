@@ -2,6 +2,7 @@ package com.codecool;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Card{
 
@@ -20,6 +21,10 @@ public class Card{
 
     public int getId() {
         return id;
+    }
+
+    public Set getKeySet() {
+        return stats.keySet();
     }
 
     public void addStat(String type, int stat) {
