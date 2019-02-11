@@ -32,7 +32,8 @@ public class GameController {
     }
 
     public void addPlayer(int serial) {
-        Player player = ui.createPlayer(serial);
+        String playerName = ui.createPlayer(serial);
+        Player player = new Player(playerName);
         players.add(player);
     }
 }
