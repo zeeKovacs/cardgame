@@ -16,8 +16,8 @@ public class UI {
     }
 
     public String statToCompare(Card card) {
-        Map<String, Integer> stats = card.getAllStatistic();
-        mapPrinter(stats);
+        System.out.println("Choose which stat of the cards you want to compare.");
+        System.out.println(card);
         input = getInput();
         // input is in the keySet() of the map
         return input;
