@@ -13,11 +13,24 @@ public class UI {
 
     String getDeckType() {
         System.out.println("Please select a deck type.");
+        // getter to see what XML filed do we have - returns an array
         String[] deckTypes = {"Dictators", "Goats", "Wardrobes"};
         arrPrinter(deckTypes);
         input = getInput();
         // input is within the range of 0 and deckTypes.length
         return deckTypes[Integer.parseInt(input) - 1];
+    }
+
+    Player createPlayer(int serial) {
+        System.out.println("Enter the " + serial + ". player's name.");
+        String name = getInput();
+        return new Player(name);
+    }
+
+    int getPlayerNumber() {
+        System.out.println("Enter the number of players. (1-4)");
+        // if playerNum is between 1-4
+        return Integer.parseInt(getInput());
     }
 
     public String statToCompare(Card card) {
