@@ -14,10 +14,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class XMLHandler {
     private String filepath;
     private Document document;
+
     public XMLHandler(String filepath) {
         this.filepath = filepath;
     }
@@ -27,27 +29,48 @@ public class XMLHandler {
 
         getDocument();
         GameData gameData = getGameData();
+        Set<String> fields = gameData.getFieldIds();
+        Deck deck = new Deck("Test deck");
+
+        NodeList docCardList = document.getElementsByTagName("Card");
+        for (int i = 0; i < docCardList.getLength(); i++) {
+            Element docCard = (Element) docCardList.item(i);
+            int id = Integer.parseInt(docCard.getAttribute("id"));
+            String name = docCard.getAttribute("name");
+            System.out.println(name);
+            Card card = new Card(id, name);
+            for (String field : fields) {
+
+                Element docField = (Element) docCard.getElementsByTagName(field).item(0);
+                String fieldName = docField.getTagName();
+                int fieldValue = Integer.parseInt( docField.getAttribute("val"));
+                card.addStat(fieldName, fieldValue);
+            }
+
+        }
 
         return new Deck("dfsd");
     }
 
     private GameData getGameData() {
-        NodeList docCardList = document.getElementsByTagName("Fields");
+        Element root = (Element) document.getElementsByTagName("Fields").item(0);
+        NodeList docFieldList = root.getElementsByTagName("Field");
         GameData gameData = new GameData();
-        for (int i = 0; i < docCardList.getLength(); i++ ){
-            System.out.println("sdfsd");
 
-            Element field = (Element)docCardList.item(i);
+
+        for (int i = 0; i < docFieldList.getLength(); i++) {
+
+            Element field = (Element) docFieldList.item(i);
             String id = field.getAttribute("id");
             String description = field.getAttribute("description");
+            gameData.addField(id, description);
 
-            System.out.println(id);
         }
 
         return gameData;
     }
 
-    private void getDocument() throws XMLLoadError{
+    private void getDocument() throws XMLLoadError {
         DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = null;
         try {
