@@ -1,6 +1,5 @@
 package com.codecool;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class UI {
@@ -25,10 +24,9 @@ public class UI {
         return deckTypes[Integer.parseInt(input) - 1];
     }
 
-    Player createPlayer(int serial) {
+    String createPlayer(int serial) {
         System.out.println("Enter the " + serial + ". player's name.");
-        String name = getInput();
-        return new Player(name);
+        return getInput();
     }
 
     int getPlayerNumber() {
