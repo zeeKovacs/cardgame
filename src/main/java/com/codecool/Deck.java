@@ -1,5 +1,6 @@
 package com.codecool;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 public class Deck implements Iterator<Card> {
 
     String type;
-    List<Card> deck;
+    List<Card> deck = new ArrayList<>();
 
 
     public Deck(String deckType) {
@@ -32,5 +33,9 @@ public class Deck implements Iterator<Card> {
         Card nextCard = deck.get(deck.size()-1);
         deck.remove(nextCard);
         return nextCard;
+    }
+
+    public void addCard(Card card) {
+        deck.add(card);
     }
 }
