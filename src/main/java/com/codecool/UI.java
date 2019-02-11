@@ -8,6 +8,7 @@ public class UI {
 
     public void printMainMenu() {
         System.out.println("Welcome to XYZ Card Game.\nPress 'S' to start or 'X' to exit!" );
+
     }
 
     String getDeckType() {
@@ -27,7 +28,7 @@ public class UI {
         return input;
     }
 
-    private String getInput() {
+    String getInput() {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
