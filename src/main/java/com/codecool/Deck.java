@@ -38,4 +38,13 @@ public class Deck implements Iterator<Card> {
     public void addCard(Card card) {
         deck.add(card);
     }
+
+    @Override
+    public String toString() {
+        String str = "";
+        for (Card card : deck) {
+            str += card.toString() + "\n\n";
+        }
+        return str;
+    }
 }
