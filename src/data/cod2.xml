@@ -1,0 +1,154 @@
+<Card_set>
+    <Data name="Trial of Tyrants" type_singular="Weapon" type_plural="Weapons"/>
+    <Cards>
+        <Card name="Colt">
+            <Range val="5"/>
+            <Damage val="49"/>
+            <Chamber val="7"/>
+            <Accuracy val="6"/>
+        </Card>
+        <Card name="Luger">
+            <Range val="5"/>
+            <Damage val="49"/>
+            <Chamber val="8"/>
+            <Accuracy val="6"/>
+        </Card>
+        <Card name="Tokarev">
+            <Range val="5"/>
+            <Damage val="49"/>
+            <Chamber val="8"/>
+            <Accuracy val="6"/>
+        </Card>
+        <Card name="Webley">
+            <Range val="5"/>
+            <Damage val="49"/>
+            <Chamber val="7"/>
+            <Accuracy val="6"/>
+        </Card>
+        <Card name="Thompson">
+            <Range val="5"/>
+            <Damage val="26"/>
+            <Chamber val="20"/>
+            <Accuracy val="5"/>
+        </Card>
+        <Card name="Grease Gun">
+            <Range val="6"/>
+            <Damage val="25"/>
+            <Chamber val="32"/>
+            <Accuracy val="6"/>
+        </Card>
+        <Card name="MP40">
+            <Range val="6"/>
+            <Damage val="26"/>
+            <Chamber val="32"/>
+            <Accuracy val="6"/>
+        </Card>
+        <Card name="PPSH">
+            <Range val="5"/>
+            <Damage val="23"/>
+            <Chamber val="71"/>
+            <Accuracy val="4"/>
+        </Card>
+        <Card name="PPS">
+            <Range val="5"/>
+            <Damage val="26"/>
+            <Chamber val="35"/>
+            <Accuracy val="5"/>
+        </Card>
+        <Card name="Sten">
+            <Range val="5"/>
+            <Damage val="25"/>
+            <Chamber val="32"/>
+            <Accuracy val="5"/>
+        </Card>
+        <Card name="Winchester">
+            <Range val="3"/>
+            <Damage val="99"/>
+            <Chamber val="6"/>
+            <Accuracy val="3"/>
+        </Card>
+        <Card name="Gewehr">
+            <Range val="7"/>
+            <Damage val="49"/>
+            <Chamber val="10"/>
+            <Accuracy val="7"/>
+        </Card>
+        <Card name="Kar98K">
+            <Range val="9"/>
+            <Damage val="91"/>
+            <Chamber val="5"/>
+            <Accuracy val="9"/>
+        </Card>
+        <Card name="Lee-Enfield">
+            <Range val="9"/>
+            <Damage val="89"/>
+            <Chamber val="10"/>
+            <Accuracy val="9"/>
+        </Card>
+        <Card name="Springfield">
+            <Range val="10"/>
+            <Damage val="90"/>
+            <Chamber val="5"/>
+            <Accuracy val="10"/>
+        </Card>
+        <Card name="M1 Carabine">
+            <Range val="7"/>
+            <Damage val="34"/>
+            <Chamber val="15"/>
+            <Accuracy val="7"/>
+        </Card>
+        <Card name="M1 Garand">
+            <Range val="8"/>
+            <Damage val="51"/>
+            <Chamber val="8"/>
+            <Accuracy val="8"/>
+        </Card>
+        <Card name="Mosin Nagant">
+            <Range val="9"/>
+            <Damage val="85"/>
+            <Chamber val="5"/>
+            <Accuracy val="9"/>
+        </Card>
+        <Card name="MP44">
+            <Range val="7"/>
+            <Damage val="34"/>
+            <Chamber val="30"/>
+            <Accuracy val="7"/>
+        </Card>
+        <Card name="Tokarev SVT">
+            <Range val="7"/>
+            <Damage val="34"/>
+            <Chamber val="10"/>
+            <Accuracy val="7"/>
+        </Card>
+        <Card name="Bren">
+            <Range val="5"/>
+            <Damage val="49"/>
+            <Chamber val="30"/>
+            <Accuracy val="4"/>
+        </Card>
+        <Card name="Bar">
+            <Range val="6"/>
+            <Damage val="49"/>
+            <Chamber val="20"/>
+            <Accuracy val="5"/>
+        </Card>
+        <Card name="Browning M1919">
+            <Range val="5"/>
+            <Damage val="50"/>
+            <Chamber val="20"/>
+            <Accuracy val="3"/>
+        </Card>
+        <Card name="MG42">
+            <Range val="5"/>
+            <Damage val="45"/>
+            <Chamber val="100"/>
+            <Accuracy val="3"/>
+        </Card>
+    </Cards>
+    <Fields>
+        <Field id="Range" description="Range of Weapon"/>
+        <Field id="Damage" description="Damage of Weapon"/>
+        <Field id="Chamber" description="Size of Chamber"/>
+        <Field id="Accuracy" description="Accuracy of Weapon"/>
+    </Fields>
