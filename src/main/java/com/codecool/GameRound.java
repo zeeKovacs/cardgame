@@ -17,11 +17,6 @@ public class GameRound {
     }
 
     public boolean gameRuns() {
-        for (Player player : players) {
-            if (player.getHandSize() == 0) {
-                return false;
-            }
-        }
         return true;
     }
 
@@ -39,6 +34,17 @@ public class GameRound {
             winner.addCard(p.getHand().next());
         }
         winner.addCard(winner.getHand().next());
+        for (Player player : players) {
+            if (player.getHandSize() == 0) {
+                declareWinner(players);
+            }
+        }
         ui.endRound(winner);
+    }
+
+    private void declareWinner(List<Player> players) {
+        players.sort(pc);
+        Player theWinner = players.get(0);
+        ui.gameOver(theWinner);
     }
 }
