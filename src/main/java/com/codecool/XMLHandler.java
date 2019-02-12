@@ -38,9 +38,9 @@ public class XMLHandler {
 
         NodeList docCardList = document.getElementsByTagName("Card");
         deck = new Deck();
+        int id = 0;
         for (int i = 0; i < docCardList.getLength(); i++) {
             Element docCard = (Element) docCardList.item(i);
-            int id = Integer.parseInt(docCard.getAttribute("id"));
             String name = docCard.getAttribute("name");
             Card card = new Card(id, name);
             for (String field : fields) {
@@ -59,6 +59,7 @@ public class XMLHandler {
                 }
                 card.addStat(fieldName, fieldValue);
             }
+            id++;
             deck.addCard(card);
         }
     }

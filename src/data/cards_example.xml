@@ -1,35 +1,161 @@
 <Card_set>
     <Data name="Trial of Tyrants" type_singular="Dictator" type_plural="Dictators"/>
     <Cards>
-        <Card id="0" name="Dezső">
-            <Cruelty val="67"/>
-            <Casualties val="55"/>
-            <Reign_len val="23"/>
-            <Child_num val="8"/>
+        <Card name="Robert Mugabe">
+            <cruelty val="67"/>
+            <casualties val="14"/>
+            <reign val="30"/>
+            <children val="4"/>
         </Card>
-        <Card id="1" name="János">
-            <Cruelty val="65"/>
-            <Casualties val="45"/>
-            <Reign_len val="7"/>
-            <Child_num val="55"/>
+        <Card name="Kim Jong-Il">
+            <cruelty val="74"/>
+            <casualties val="45"/>
+            <reign val="17"/>
+            <children val="5"/>
         </Card>
-        <Card id="2" name="Hugó">
-            <Cruelty val="34"/>
-            <Casualties val="768"/>
-            <Reign_len val="6"/>
-            <Child_num val="23213"/>
+        <Card name="Kim Il-sung">
+            <cruelty val="76"/>
+            <casualties val="63"/>
+            <reign val="17"/>
+            <children val="6"/>
         </Card>
-        <Card id="3" name="Ernő">
-            <Cruelty val="76"/>
-            <Casualties val="67"/>
-            <Reign_len val="33"/>
-            <Child_num val="87"/>
+        <Card name="Idi Amin Dada">
+            <cruelty val="67"/>
+            <casualties val="768"/>
+            <reign val="6"/>
+            <children val="43"/>
+        </Card>
+        <Card name="Fidel Castro">
+            <cruelty val="11"/>
+            <casualties val="38"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Kōki Hirota">
+            <cruelty val="72"/>
+            <casualties val="67"/>
+            <reign val="1"/>
+            <children val="0"/>
+        </Card>
+        <Card name="Chiang Kai-shek">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Ho Chi Minh">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Yakubu Gowon">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Kim Il Sung">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Saddam Hussein">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Josef Stalin">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Leopold II">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Adolf Hitler">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Benito Mussolini">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Bonaparte Napoleon">
+            <cruelty val="76"/>d
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Caligula">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Nero">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Commodus">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="My Cat">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Richard III">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="William the Conqueror">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Henry VIII">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Edward I">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
+        </Card>
+        <Card name="Oliver Cromwell">
+            <cruelty val="76"/>
+            <casualties val="67"/>
+            <reign val="33"/>
+            <children val="87"/>
         </Card>
     </Cards>
     <Fields>
-        <Field id="Cruelty" description="Cruelty Factor"/>
-        <Field id="Casualties" description="Casualty Factor"/>
-        <Field id="Reign_len" description="Length of Reign"/>
-        <Field id="Child_num" description="Number of Children"/>
+        <Field id="cruelty" description="cruelty Factor"/>
+        <Field id="casualties" description="Casualty Factor"/>
+        <Field id="reign" description="Length of Reign"/>
+        <Field id="children" description="Number of childrenren"/>
     </Fields>
 </Card_set>

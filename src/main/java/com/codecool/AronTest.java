@@ -15,7 +15,7 @@ public class AronTest {
 
             Card c2 = deck.getDeck().get(1);
             Comparator<Card> comp = new CardComparator("Reign_len");
-            deck.getDeck().sort(comp);
+            //deck.getDeck().sort(comp);
             System.out.println(deck);
 
 
