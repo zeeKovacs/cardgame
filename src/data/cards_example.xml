@@ -1,5 +1,16 @@
 <Card_set>
-    <Data name="Trial of Tyrants" type_singular="Dictator" type_plural="Dictators"/>
+    <Data name="Master Dictator" type_singular="Dictator" type_plural="Dictators">
+Ease your thirst for power and grandeur by collecting cards of the nastiest rulers ever to walk the earth.
+Buckle up, pit yourself against your so-called friends and become the richest of the poor-tempered,
+the most complicated simpleton, the asshole to end all assholes, in other words:
+The Master Dictator
+    </Data>
+    <Fields>
+        <Field id="cruelty" description="cruelty Factor"/>
+        <Field id="casualties" description="Casualty Factor"/>
+        <Field id="reign" description="Length of Reign"/>
+        <Field id="children" description="Number of children"/>
+    </Fields>
     <Cards>
         <Card name="Robert Mugabe">
             <cruelty val="67"/>
@@ -40,19 +51,19 @@
         <Card name="Chiang Kai-shek">
             <cruelty val="76"/>
             <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <reign val="48"/>
+            <children val="2"/>
         </Card>
         <Card name="Ho Chi Minh">
             <cruelty val="76"/>
             <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <reign val="24"/>
+            <children val="0"/>
         </Card>
         <Card name="Yakubu Gowon">
             <cruelty val="76"/>
             <casualties val="67"/>
-            <reign val="33"/>
+            <reign val="9"/>
             <children val="87"/>
         </Card>
         <Card name="Kim Il Sung">
@@ -152,10 +163,4 @@
             <children val="87"/>
         </Card>
     </Cards>
-    <Fields>
-        <Field id="cruelty" description="cruelty Factor"/>
-        <Field id="casualties" description="Casualty Factor"/>
-        <Field id="reign" description="Length of Reign"/>
-        <Field id="children" description="Number of childrenren"/>
-    </Fields>
 </Card_set>

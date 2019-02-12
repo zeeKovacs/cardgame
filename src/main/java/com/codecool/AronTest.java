@@ -10,8 +10,9 @@ public class AronTest {
             handler.load();
             Deck deck = handler.getDeck();
             GameData gameData = handler.getGameData();
+            System.out.println(gameData);
             System.out.println(deck.getDeck().get(1).getName());
-            System.out.println(gameData.getFieldDescription("Reign_len"));
+
 
             Card c2 = deck.getDeck().get(1);
             Comparator<Card> comp = new CardComparator("Reign_len");

@@ -69,7 +69,8 @@ public class XMLHandler {
         String name = docData.getAttribute("name");
         String typeSingular = docData.getAttribute("type_singular");
         String typePlural = docData.getAttribute("type_plural");
-        gameData = new GameData(name, typeSingular, typePlural);
+        String gameDescription = docData.getTextContent();
+        gameData = new GameData(name, gameDescription, typeSingular, typePlural);
 
         Element root = (Element) document.getElementsByTagName("Fields").item(0);
         NodeList docFieldList = root.getElementsByTagName("Field");
