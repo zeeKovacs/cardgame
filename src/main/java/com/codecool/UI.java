@@ -1,8 +1,6 @@
 package com.codecool;
 
-import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class UI {
 
@@ -39,13 +37,15 @@ public class UI {
     }
 
     public String statToCompare(Card card) {
-        System.out.println("Choose which stat of the cards you want to compare.\n" + card);
-        input = getInput();
-        while (!card.getKeySet().contains(input)) {
-            System.out.println("Enter a valid stat.");
-            input = getInput();
+        Set fields = card.getKeySet();
+        List<String> fieldsList = new ArrayList<>();
+        System.out.println(card + "\nChoose which stat of the cards you want to compare.");
+        for (Object field : fields) {
+            fieldsList.add((String) field);
         }
-        return input;
+        listPrinter(fieldsList);
+        intInput = getIntInput();
+        return fieldsList.get(intInput - 1);
     }
 
     private int getIntInput() {
