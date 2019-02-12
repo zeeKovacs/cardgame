@@ -1,6 +1,9 @@
 package com.codecool;
 
 public class PlayerBuilder {
+    /*
+    Builds AI or HUuman players based on input given. Needs an UI instance for human player instantiation
+     */
     private UI ui;
 
     public PlayerBuilder(UI ui) {

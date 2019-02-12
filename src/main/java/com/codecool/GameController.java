@@ -41,7 +41,9 @@ public class GameController {
 
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {
-            players.add(playerBuilder.create(ui.askPlayerName(i + 1), true));
+            String name = ui.askPlayerName(i + 1);
+            boolean playerIsHuman = ui.askPlayerType(name);
+            players.add(playerBuilder.create(name, playerIsHuman));
 
         }
     }

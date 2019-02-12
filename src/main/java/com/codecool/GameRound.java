@@ -35,20 +35,29 @@ public class GameRound {
         for (Player p : players) {
             winner.addCard(p.getAndRemoveTopCard());
         }
+        ui.showRoundWinner(winner);
         //winner.addCard(winner.getHand().next());
+        List<Player> losers = new ArrayList<>();
         for (Player player : players) {
             if (player.getHandSize() == 0) {
-                declareWinner(players);
+                losers.add(player);
             }
         }
 
-        ui.endRound(winner);
+        for (Player player : losers) {
+            players.remove(player);
+            ui.showLostPlayer(player);
+        }
+
+        if (players.size() == 1) {
+
+            declareWinner(players.get(0));
+        }
     }
 
-    private void declareWinner(List<Player> players) {
-        players.sort(pc);
-        Player theWinner = players.get(0);
-        ui.gameOver(theWinner);
+    private void declareWinner(Player player) {
+        ui.gameOver(player);
+        throw new ArrayIndexOutOfBoundsException();
     }
 
 

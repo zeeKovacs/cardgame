@@ -69,6 +69,7 @@ public class UI {
         return intInput;
     }
 
+
     String getInput() {
         input = sc.nextLine();
         while (input.equals("")) {
@@ -96,7 +97,7 @@ public class UI {
         System.out.println(player.revealTopCard() + "\n");
    }
 
-    void endRound(Player winner) {
+    void showRoundWinner(Player winner) {
         clearTerminal();
         System.out.println(winner.getName() + " has won the round. It's his/her turn now!");
     }
@@ -111,5 +112,26 @@ public class UI {
 
     public void showGameInstructions(GameData gameData) {
         System.out.println(gameData);
+    }
+
+    public void showLostPlayer(Player player) {
+        System.out.println(player.getName() + " has lost the game.\n");
+    }
+
+    public boolean askPlayerType(String name) {
+        System.out.println("Set control for '" + name + "'\n1. Human\n2. AI");
+        int selection = getIntInput();
+        Boolean humanPlayer = null;
+        while (humanPlayer == null) {
+
+            if (selection == 1) {
+                humanPlayer = true;
+            } else if (selection == 2){
+                humanPlayer = false;
+            } else {
+                System.out.println("Invalid number given!");
+            }
+        }
+        return humanPlayer;
     }
 }
