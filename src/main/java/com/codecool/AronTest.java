@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class AronTest {
     public static void main(String[] args) {
-        XMLHandler handler = new XMLHandler("src/data/cards_example.xml");
+        XMLHandler handler = new XMLHandler("src/data/master_dictator.xml");
         try {
             handler.load();
             Deck deck = handler.getDeck();
@@ -15,8 +15,8 @@ public class AronTest {
 
 
             Card c2 = deck.getDeck().get(1);
-            Comparator<Card> comp = new CardComparator("Reign_len");
-            //deck.getDeck().sort(comp);
+            Comparator<Card> comp = new CardComparator("cruelty");
+            deck.getDeck().sort(comp);
             System.out.println(deck);
 
 

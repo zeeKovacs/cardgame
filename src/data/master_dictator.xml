@@ -1,8 +1,8 @@
 <Card_set>
     <Data name="Master Dictator" type_singular="Dictator" type_plural="Dictators">
-Ease your thirst for power and grandeur by collecting cards of the nastiest rulers ever to walk the earth.
+Ease your thirst for power and grandeur by collecting the nastiest rulers ever to walk the earth.
 Buckle up, pit yourself against your so-called friends and become the richest of the poor-tempered,
-the most complicated simpleton, the asshole to end all assholes, in other words:
+the most complicated simpleton, the assholes to end all assholes, in other words:
 The Master Dictator
     </Data>
     <Fields>
@@ -37,10 +37,10 @@ The Master Dictator
             <children val="43"/>
         </Card>
         <Card name="Fidel Castro">
-            <cruelty val="11"/>
-            <casualties val="38"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="42"/>
+            <casualties val="29"/>
+            <reign val="52"/>
+            <children val="11"/>
         </Card>
         <Card name="Kōki Hirota">
             <cruelty val="72"/>
@@ -69,32 +69,32 @@ The Master Dictator
         <Card name="Kim Il Sung">
             <cruelty val="76"/>
             <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <reign val="46"/>
+            <children val="6"/>
         </Card>
         <Card name="Saddam Hussein">
             <cruelty val="76"/>
             <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <reign val="34"/>
+            <children val="5"/>
         </Card>
         <Card name="Josef Stalin">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="87"/>
+            <casualties val="86"/>
+            <reign val="24"/>
+            <children val="4"/>
         </Card>
         <Card name="Leopold II">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="69"/>
+            <casualties val="84"/>
+            <reign val="44"/>
+            <children val="4"/>
         </Card>
         <Card name="Adolf Hitler">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="91"/>
+            <casualties val="71"/>
+            <reign val="12"/>
+            <children val="0"/>
         </Card>
         <Card name="Benito Mussolini">
             <cruelty val="76"/>
@@ -103,60 +103,66 @@ The Master Dictator
             <children val="87"/>
         </Card>
         <Card name="Bonaparte Napoleon">
-            <cruelty val="76"/>d
+            <cruelty val="16"/>
             <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <reign val="10"/>
+            <children val="3"/>
         </Card>
         <Card name="Caligula">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="34"/>
+            <casualties val="11"/>
+            <reign val="8"/>
+            <children val="0"/>
         </Card>
         <Card name="Nero">
-            <cruelty val="76"/>
-            <casualties val="67"/>
+            <cruelty val="39"/>
+            <casualties val="28"/>
             <reign val="33"/>
             <children val="87"/>
         </Card>
         <Card name="Commodus">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="61"/>
+            <casualties val="23"/>
+            <reign val="15"/>
+            <children val="2"/>
         </Card>
         <Card name="My Cat">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
-        </Card>
-        <Card name="Richard III">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="99"/>
+            <casualties val="99"/>
+            <reign val="99"/>
+            <children val="99"/>
         </Card>
         <Card name="William the Conqueror">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="24"/>
+            <casualties val="31"/>
+            <reign val="21"/>
+            <children val="10"/>
         </Card>
         <Card name="Henry VIII">
-            <cruelty val="76"/>
-            <casualties val="67"/>
-            <reign val="33"/>
-            <children val="87"/>
+            <cruelty val="41"/>
+            <casualties val="28"/>
+            <reign val="38"/>
+            <children val="16"/>
         </Card>
         <Card name="Edward I">
             <cruelty val="76"/>
             <casualties val="67"/>
+            <reign val="35"/>
+            <children val="17"/>
+        </Card>
+        <Card name="Oliver Cromwell">
+            <cruelty val="37"/>
+            <casualties val="21"/>
+            <reign val="5"/>
+            <children val="9"/>
+        </Card>
+        <Card name="Ivan IV: “the Terrible”">
+            <cruelty val="76"/>
+            <casualties val="67"/>
             <reign val="33"/>
             <children val="87"/>
         </Card>
-        <Card name="Oliver Cromwell">
+        <Card name="Maximilien Robespierre”">
             <cruelty val="76"/>
             <casualties val="67"/>
             <reign val="33"/>
