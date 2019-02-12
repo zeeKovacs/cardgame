@@ -1,5 +1,8 @@
 <Card_set>
-    <Data name="Gun game" type_singular="Weapon" type_plural="Weapons"/>
+    <Data name="Gun game" type_singular="Weapon" type_plural="Weapons">
+Featuring the weapons of the old classic, Call of Duty 2, you can now show off your knowledge
+against your friends in this custom card game. Keine Zeit verschwenden!
+    </Data>
     <Cards>
         <Card name="Colt">
             <Range val="5"/>
