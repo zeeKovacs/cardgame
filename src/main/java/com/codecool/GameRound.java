@@ -17,6 +17,11 @@ public class GameRound {
     }
 
     public boolean gameRuns() {
+        for (Player player : players) {
+            if (player.getHandSize() == 0) {
+                return false;
+            }
+        }
         return true;
     }
 

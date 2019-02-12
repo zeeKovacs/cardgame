@@ -9,11 +9,15 @@ public class UI {
     private int intInput;
 
     public void printMainMenu() {
-        System.out.println("Welcome to XYZ Card Game.\nPress 'S' to start or 'X' to exit!");
+        clearTerminal();
+        System.out.println("+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
+                           "|  Welcome to Cool Custom Card Game! |\n" +
+                           "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
+                           "\\Press 'S' to start or 'X' to exit!\\");
     }
 
     String getDeckType(List<String> deckTypes) {
-        System.out.println("Please select a deck type.");
+        System.out.println("Please select a deck type!");
         listPrinter(deckTypes);
         intInput = getIntInput();
         while (intInput < 0 || intInput > deckTypes.size()) {
@@ -23,12 +27,12 @@ public class UI {
     }
 
     String createPlayer(int serial) {
-        System.out.println("Enter the " + serial + ". player's name.");
+        System.out.println("Enter the " + serial + ". player's name!");
         return getInput();
     }
 
     int getPlayerNumber() {
-        System.out.println("Enter the number of players. (1-4)");
+        System.out.println("Enter the number of players! (1-4)");
         intInput = getIntInput();
         while (intInput < 0 || intInput > 4) {
             intInput = getIntInput();
@@ -39,7 +43,8 @@ public class UI {
     public String statToCompare(Card card) {
         Set fields = card.getKeySet();
         List<String> fieldsList = new ArrayList<>();
-        System.out.println(card + "\nChoose which stat of the cards you want to compare.");
+        System.out.println(card + "\n\n===================================================" +
+                                "\nChoose which stat of the cards you want to compare!");
         for (Object field : fields) {
             fieldsList.add((String) field);
         }
@@ -50,7 +55,7 @@ public class UI {
 
     private int getIntInput() {
         while (!sc.hasNextInt()) {
-            System.out.println("Enter a valid number.");
+            System.out.println("Enter a valid number!");
             input = sc.nextLine();
             sc.nextLine();
         }
@@ -76,11 +81,16 @@ public class UI {
 
     void startRound(List<Player> players) {
         for (Player p : players) {
-            System.out.println(p.getName() + p.getHandSize());
+            System.out.println(p.getName() + " has " + p.getHandSize() + " cards in hand");
         }
     }
 
     void endRound(Player winner) {
-        System.out.println(winner.getName() + " has won the round.");
+        clearTerminal();
+        System.out.println(winner.getName() + " has won the round. It's his/her turn now!");
+    }
+
+    private void clearTerminal() {
+        System.out.println("\033[H\033[2J");
     }
 }

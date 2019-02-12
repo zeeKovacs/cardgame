@@ -20,10 +20,6 @@ public class Card{
         return name;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public Set getKeySet() {
         return stats.keySet();
     }
@@ -38,10 +34,13 @@ public class Card{
 
     @Override
     public String toString() {
-        String toPrint = String.format("%-20s (%s)", name, id);
+        String toPrint = "+~~~~~~~~~~~~~~~~~~~~~~+\n" +
+                         String.format("| %-15s (%2d) |", name, id) +
+                         "\no~~~~~~~~~~~~~~~~~~~~~~o";
         for (String key : stats.keySet()) {
-            toPrint += String.format("\n%-20s = %s" , key, stats.get(key));
+            toPrint += String.format("\n| %-15s %4d |" , key, stats.get(key));
         }
+        toPrint += "\n+~~~~~~~~~~~~~~~~~~~~~~+";
         return toPrint;
     }
 }
