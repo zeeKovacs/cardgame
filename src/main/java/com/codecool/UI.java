@@ -21,6 +21,7 @@ public class UI {
         listPrinter(deckTypes);
         intInput = getIntInput();
         while (intInput < 0 || intInput > deckTypes.size()) {
+            System.out.println("Please enter a valid number.");
             intInput = getIntInput();
         }
         return deckTypes.get(intInput - 1);
@@ -35,6 +36,7 @@ public class UI {
         System.out.println("Enter the number of players! (1-4)");
         intInput = getIntInput();
         while (intInput < 0 || intInput > 4) {
+            System.out.println("Please enter a valid number.");
             intInput = getIntInput();
         }
         return intInput;
@@ -50,14 +52,17 @@ public class UI {
         }
         listPrinter(fieldsList);
         intInput = getIntInput();
+        while (intInput < 0 || intInput > fieldsList.size()) {
+            System.out.println("Please enter a valid number.");
+            intInput = getIntInput();
+        }
         return fieldsList.get(intInput - 1);
     }
 
     private int getIntInput() {
         while (!sc.hasNextInt()) {
-            System.out.println("Enter a valid number!");
+            System.out.println("Please enter a valid number.");
             input = sc.nextLine();
-            sc.nextLine();
         }
         intInput = sc.nextInt();
         sc.nextLine();
@@ -67,7 +72,7 @@ public class UI {
     String getInput() {
         input = sc.nextLine();
         while (input.equals("")) {
-            System.out.println("Enter a valid string.");
+            System.out.println("Please enter a valid string.");
             input = sc.nextLine();
         }
         return input;
@@ -88,6 +93,10 @@ public class UI {
     void endRound(Player winner) {
         clearTerminal();
         System.out.println(winner.getName() + " has won the round. It's his/her turn now!");
+    }
+
+    public void gameOver(Player winner) {
+        System.out.println("Game Over!\n" + "With " + winner.getHandSize() + " cards in hand\n" + winner.getName() + " has won the match!");
     }
 
     private void clearTerminal() {
