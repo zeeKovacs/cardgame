@@ -152,3 +152,4 @@
         <Field id="Chamber" description="Size of Chamber"/>
         <Field id="Accuracy" description="Accuracy of Weapon"/>
     </Fields>
+</Card_set>
