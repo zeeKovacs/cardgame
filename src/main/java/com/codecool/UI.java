@@ -2,21 +2,26 @@ package com.codecool;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class UI {
+
+    private Scanner sc = new Scanner(System.in);
     private String input;
+    private int intInput;
 
     public void printMainMenu() {
         System.out.println("Welcome to XYZ Card Game.\nPress 'S' to start or 'X' to exit!");
-
     }
 
     String getDeckType(List<String> deckTypes) {
         System.out.println("Please select a deck type.");
         listPrinter(deckTypes);
-        input = getInput();
-        // input is within the range of 0 and deckTypes.length
-        return deckTypes.get(Integer.parseInt(input) - 1);
+        intInput = getIntInput();
+        while (intInput < 0 || intInput > deckTypes.size()) {
+            intInput = getIntInput();
+        }
+        return deckTypes.get(intInput - 1);
     }
 
     String createPlayer(int serial) {
@@ -26,20 +31,33 @@ public class UI {
 
     int getPlayerNumber() {
         System.out.println("Enter the number of players. (1-4)");
-        // if playerNum is between 1-4
-        return Integer.parseInt(getInput());
+        intInput = getIntInput();
+        while (intInput < 0 || intInput > 4) {
+            intInput = getIntInput();
+        }
+        return intInput;
     }
 
     public String statToCompare(Card card) {
         System.out.println("Choose which stat of the cards you want to compare.");
         System.out.println(card);
         input = getInput();
-        // input is in the keySet() of the map
+        while (!card.getKeySet().contains(input)) {
+            System.out.println("Enter a valid stat.");
+            input = getInput();
+        }
         return input;
     }
 
+    private int getIntInput() {
+        while (!sc.hasNextInt()) {
+            System.out.println("Enter a valid number.");
+            input = sc.nextLine();
+        }
+        return sc.nextInt();
+    }
+
     String getInput() {
-        Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
 
