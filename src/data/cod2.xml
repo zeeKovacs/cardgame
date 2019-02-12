@@ -1,5 +1,5 @@
 <Card_set>
-    <Data name="Trial of Tyrants" type_singular="Weapon" type_plural="Weapons"/>
+    <Data name="Gun game" type_singular="Weapon" type_plural="Weapons"/>
     <Cards>
         <Card name="Colt">
             <Range val="5"/>
