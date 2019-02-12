@@ -36,6 +36,8 @@ public class GameController {
         deckOnTable = reader.getDeck();
         deckOnTable.shuffle();
         gameData = reader.getGameData();
+        ui.showGameInstructions(gameData);
+
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {
             addPlayer(i + 1);
@@ -54,7 +56,6 @@ public class GameController {
 
     private void startGame() {
         GameRound gameRound = new GameRound(ui, players, gameData);
-        ui.showGameInstructions(gameData);
         while (gameRound.gameRuns()) {
             gameRound.run();
         }

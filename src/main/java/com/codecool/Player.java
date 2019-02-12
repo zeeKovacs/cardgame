@@ -24,11 +24,18 @@ public class Player {
         return hand.getDeck().size();
     }
 
-    public Card getNextCard() {
-        return hand.getDeck().get(0);
-    }
 
     public Deck getHand() {
         return hand;
+    }
+
+    public Card revealTopCard() {
+        return hand.getDeck().get(0);
+    }
+
+    public Card getAndRemoveTopCard() {
+        Card card = revealTopCard();
+        hand.getDeck().remove(card);
+        return card;
     }
 }

@@ -12,8 +12,8 @@ public class PlayerComparator implements Comparator<Player> {
 
     @Override
     public int compare(Player o1, Player o2) {
-        Card c1 = o1.getNextCard();
-        Card c2 = o2.getNextCard();
+        Card c1 = o1.revealTopCard();
+        Card c2 = o2.revealTopCard();
         return cp.compare(c1, c2);
     }
 }

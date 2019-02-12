@@ -22,7 +22,7 @@ public class GameRound {
 
     public void run() {
         ui.startRound(players);
-        pc.setKey(ui.statToCompare(players.get(0).getNextCard()));
+        pc.setKey(ui.statToCompare(players.get(players.size() - 1).revealTopCard()));
         List<Player> ranks = new ArrayList<>();
         for (Player player : players) {
             ranks.add(player);
@@ -30,16 +30,17 @@ public class GameRound {
         }
         ranks.sort(pc);
         Player winner = ranks.get(ranks.size() - 1);
-        ranks.remove(winner);
+        //ranks.remove(winner);
         for (Player p : ranks) {
-            winner.addCard(p.getHand().next());
+            winner.addCard(p.getAndRemoveTopCard());
         }
-        winner.addCard(winner.getHand().next());
+        //winner.addCard(winner.getHand().next());
         for (Player player : players) {
             if (player.getHandSize() == 0) {
                 declareWinner(players);
             }
         }
+        players = ranks;
         ui.endRound(winner);
     }
 
