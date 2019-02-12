@@ -54,6 +54,7 @@ public class GameController {
 
     private void startGame() {
         GameRound gameRound = new GameRound(ui, players, gameData);
+        ui.showGameInstructions(gameData);
         while (gameRound.gameRuns()) {
             gameRound.run();
         }

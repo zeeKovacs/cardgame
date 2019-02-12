@@ -26,6 +26,7 @@ public class GameRound {
         List<Player> ranks = new ArrayList<>();
         for (Player player : players) {
             ranks.add(player);
+            ui.showPlayerCard(player);
         }
         ranks.sort(pc);
         Player winner = ranks.get(ranks.size() - 1);
@@ -47,4 +48,6 @@ public class GameRound {
         Player theWinner = players.get(0);
         ui.gameOver(theWinner);
     }
+
+
 }

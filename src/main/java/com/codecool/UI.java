@@ -90,6 +90,12 @@ public class UI {
         }
     }
 
+   public void showPlayerCard(Player player) {
+
+        System.out.println(player.getName() + " has");
+        System.out.println(player.getHand().getDeck().get(0) + "\n");
+   }
+
     void endRound(Player winner) {
         clearTerminal();
         System.out.println(winner.getName() + " has won the round. It's his/her turn now!");
@@ -101,5 +107,9 @@ public class UI {
 
     private void clearTerminal() {
         System.out.println("\033[H\033[2J");
+    }
+
+    public void showGameInstructions(GameData gameData) {
+        System.out.println(gameData);
     }
 }
