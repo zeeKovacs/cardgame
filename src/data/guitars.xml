@@ -1,127 +1,127 @@
 <Card_set>
     <Data name="Guitar ground" type_singular="Guitar" type_plural="Guitars"/>
     <Cards>
-        <Card id="0" name="Stratocaster">
+        <Card name="Stratocaster">
             <Pickups val="3"/>
             <Release val="1954"/>
             <Average_price val="500"/>
             <Average_weight val="3"/>
         </Card>
-        <Card id="1" name="Telecaster">
+        <Card name="Telecaster">
             <Pickups val="2"/>
             <Release val="1951"/>
             <Average_price val="450"/>
             <Average_weight val="4"/>
         </Card>
-        <Card id="2" name="LesPaul">
+        <Card name="LesPaul">
             <Pickups val="2"/>
             <Release val="1952"/>
             <Average_price val="600"/>
             <Average_weight val="5"/>
         </Card>
-        <Card id="3" name="SG">
+        <Card name="SG">
             <Pickups val="2"/>
             <Release val="1961"/>
             <Average_price val="550"/>
             <Average_weight val="3"/>
         </Card>
-	<Card id="4" name="Broadcaster">
+	<Card name="Broadcaster">
             <Pickups val="1"/>
             <Release val="1950"/>
             <Average_price val="5500"/>
             <Average_weight val="4"/>
         </Card>
-	<Card id="5" name="Flying V">
+	<Card name="Flying V">
             <Pickups val="2"/>
             <Release val="1958"/>
             <Average_price val="570"/>
             <Average_weight val="4"/>
         </Card>
-	<Card id="6" name="Explorer">
+	<Card name="Explorer">
             <Pickups val="2"/>
             <Release val="1958"/>
             <Average_price val="590"/>
             <Average_weight val="3"/>
         </Card>
-	<Card id="7" name="Firebird">
+	<Card name="Firebird">
             <Pickups val="3"/>
             <Release val="1963"/>
             <Average_price val="580"/>
             <Average_weight val="4"/>
         </Card>
-	<Card id="8" name="ES-335">
+	<Card name="ES-335">
             <Pickups val="2"/>
             <Release val="1936"/>
             <Average_price val="650"/>
             <Average_weight val="2"/>
         </Card>
-	<Card id="9" name="PRS-SE">
+	<Card name="PRS-SE">
             <Pickups val="2"/>
             <Release val="1985"/>
             <Average_price val="620"/>
             <Average_weight val="3"/>
         </Card>
-	<Card id="10" name="JAM">
+	<Card name="JAM">
             <Pickups val="3"/>
             <Release val="1987"/>
             <Average_price val="800"/>
             <Average_weight val="3"/>
         </Card>
-	<Card id="11" name="RG">
+	<Card name="RG">
             <Pickups val="3"/>
             <Release val="1992"/>
             <Average_price val="350"/>
             <Average_weight val="2"/>
         </Card>
-	<Card id="12" name="Warlock">
+	<Card name="Warlock">
             <Pickups val="1"/>
             <Release val="1981"/>
             <Average_price val="550"/>
             <Average_weight val="3"/>
         </Card>
-	<Card id="13" name="Duo Jet">
+	<Card name="Duo Jet">
             <Pickups val="2"/>
             <Release val="1955"/>
             <Average_price val="990"/>
             <Average_weight val="4"/>
         </Card>
-	<Card id="14" name="Electromatic">
+	<Card name="Electromatic">
             <Pickups val="2"/>
             <Release val="1957"/>
             <Average_price val="1200"/>
             <Average_weight val="3"/>
         </Card>
-	<Card id="15" name="Jazz Master">
+	<Card name="Jazz Master">
             <Pickups val="3"/>
             <Release val="1958"/>
             <Average_price val="700"/>
             <Average_weight val="4"/>
         </Card>
-	<Card id="16" name="Mustang">
+	<Card name="Mustang">
             <Pickups val="2"/>
             <Release val="1964"/>
             <Average_price val="400"/>
             <Average_weight val="2"/>
         </Card>
-	<Card id="17" name="Musicmaster">
+	<Card name="Musicmaster">
             <Pickups val="1"/>
             <Release val="1959"/>
             <Average_price val="350"/>
             <Average_weight val="2"/>
         </Card>
-	<Card id="18" name="Soloist">
+	<Card name="Soloist">
             <Pickups val="3"/>
             <Release val="1984"/>
             <Average_price val="660"/>
             <Average_weight val="3"/>
         </Card>
-	<Card id="19" name="D-28">
+	<Card name="D-28">
             <Pickups val="0"/>
             <Release val="1930"/>
             <Average_price val="2000"/>
             <Average_weight val="1"/>
         </Card>
-	<Card id="20" name="Taylor">
+	<Card name="Taylor">
             <Pickups val="0"/>
             <Release val="1974"/>
             <Average_price val="1000"/>

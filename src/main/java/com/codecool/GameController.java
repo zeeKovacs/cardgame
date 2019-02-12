@@ -45,7 +45,9 @@ public class GameController {
     private void handCards() {
         while (deckOnTable.hasNext()) {
             for (Player player : players) {
-                player.addCard(deckOnTable.next());
+                if (deckOnTable.hasNext()) {
+                    player.addCard(deckOnTable.next());
+                }
             }
         }
     }
