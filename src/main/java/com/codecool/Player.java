@@ -2,10 +2,10 @@ package com.codecool;
 
 
 
-public class Player {
+public abstract class Player {
 
     String name;
-    Deck hand;
+    protected Deck hand;
 
     public Player(String name) {
         this.name = name;
@@ -25,8 +25,9 @@ public class Player {
     }
 
 
-    public Deck getHand() {
-        return hand;
+    public String selectStat() {
+        return "";
+
     }
 
     public Card revealTopCard() {

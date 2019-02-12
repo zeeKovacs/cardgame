@@ -22,16 +22,17 @@ public class GameRound {
 
     public void run() {
         ui.startRound(players);
-        pc.setKey(ui.statToCompare(players.get(players.size() - 1).revealTopCard()));
-        List<Player> ranks = new ArrayList<>();
+        Player startPlayer = players.get(players.size() - 1);
+        pc.setKey(startPlayer.selectStat());
+        // pc.setKey(ui.statToCompare(players.get(players.size() - 1).revealTopCard()));
+
         for (Player player : players) {
-            ranks.add(player);
             ui.showPlayerCard(player);
         }
-        ranks.sort(pc);
-        Player winner = ranks.get(ranks.size() - 1);
-        //ranks.remove(winner);
-        for (Player p : ranks) {
+        players.sort(pc);
+        Player winner = players.get(players.size() - 1);
+        //players.remove(winner);
+        for (Player p : players) {
             winner.addCard(p.getAndRemoveTopCard());
         }
         //winner.addCard(winner.getHand().next());
@@ -40,7 +41,7 @@ public class GameRound {
                 declareWinner(players);
             }
         }
-        players = ranks;
+
         ui.endRound(winner);
     }
 

@@ -11,6 +11,7 @@ public class GameController {
     private List<Player> players = new ArrayList<>();
     private UI ui = new UI();
     private GameData gameData;
+    private PlayerBuilder playerBuilder = new PlayerBuilder(ui);
 
 
     public void mainMenu() {
@@ -40,7 +41,8 @@ public class GameController {
 
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {
-            addPlayer(i + 1);
+            players.add(playerBuilder.create(ui.askPlayerName(i + 1), true));
+
         }
     }
 
@@ -61,10 +63,6 @@ public class GameController {
         }
     }
 
-    private void addPlayer(int serial) {
-        Player player = new Player(ui.createPlayer(serial));
-        players.add(player);
-    }
 
     private List<String> getDeckNames() {
         File folder = new File("src/data/");

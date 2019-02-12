@@ -27,7 +27,7 @@ public class UI {
         return deckTypes.get(intInput - 1);
     }
 
-    String createPlayer(int serial) {
+    String askPlayerName(int serial) {
         System.out.println("Enter the " + serial + ". player's name!");
         return getInput();
     }
@@ -93,7 +93,7 @@ public class UI {
    public void showPlayerCard(Player player) {
 
         System.out.println(player.getName() + " has");
-        System.out.println(player.getHand().getDeck().get(0) + "\n");
+        System.out.println(player.revealTopCard() + "\n");
    }
 
     void endRound(Player winner) {
