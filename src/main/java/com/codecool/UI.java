@@ -39,8 +39,7 @@ public class UI {
     }
 
     public String statToCompare(Card card) {
-        System.out.println("Choose which stat of the cards you want to compare.");
-        System.out.println(card);
+        System.out.println("Choose which stat of the cards you want to compare.\n" + card);
         input = getInput();
         while (!card.getKeySet().contains(input)) {
             System.out.println("Enter a valid stat.");
@@ -53,18 +52,20 @@ public class UI {
         while (!sc.hasNextInt()) {
             System.out.println("Enter a valid number.");
             input = sc.nextLine();
+            sc.nextLine();
         }
-        return sc.nextInt();
+        intInput = sc.nextInt();
+        sc.nextLine();
+        return intInput;
     }
 
     String getInput() {
-        return sc.nextLine();
-    }
-
-    private void arrPrinter(String[] array) {
-        for (int i = 1; i < array.length + 1; i++) {
-            System.out.println(i + ". " + array[i - 1]);
+        input = sc.nextLine();
+        while (input.equals("")) {
+            System.out.println("Enter a valid string.");
+            input = sc.nextLine();
         }
+        return input;
     }
 
     private void listPrinter(List list) {
