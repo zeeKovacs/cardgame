@@ -32,7 +32,7 @@ The Master Dictator
         </Card>
         <Card name="Idi Amin Dada">
             <cruelty val="67"/>
-            <casualties val="768"/>
+            <casualties val="76"/>
             <reign val="6"/>
             <children val="43"/>
         </Card>
@@ -100,7 +100,7 @@ The Master Dictator
             <cruelty val="76"/>
             <casualties val="67"/>
             <reign val="33"/>
-            <children val="87"/>
+            <children val="6"/>
         </Card>
         <Card name="Bonaparte Napoleon">
             <cruelty val="16"/>
@@ -118,7 +118,7 @@ The Master Dictator
             <cruelty val="39"/>
             <casualties val="28"/>
             <reign val="33"/>
-            <children val="87"/>
+            <children val="3"/>
         </Card>
         <Card name="Commodus">
             <cruelty val="61"/>
@@ -166,7 +166,7 @@ The Master Dictator
             <cruelty val="76"/>
             <casualties val="67"/>
             <reign val="33"/>
-            <children val="87"/>
+            <children val="0"/>
         </Card>
     </Cards>
 </Card_set>
