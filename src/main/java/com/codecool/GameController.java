@@ -21,8 +21,11 @@ public class GameController {
                 initialize();
                 handCards();
                 startGame();
+                break;
             case "x":
                 System.exit(1);
+            default:
+                break;
         }
     }
 
