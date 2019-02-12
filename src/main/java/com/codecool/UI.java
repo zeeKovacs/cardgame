@@ -102,7 +102,7 @@ public class UI {
         System.out.println(winner.getName() + " has won the round. It's his/her turn now!");
     }
 
-    public void gameOver(Player winner) {
+    public void ShowGameWinner(Player winner) {
         System.out.println("Game Over!\n" + "With " + winner.getHandSize() + " cards in hand\n" + winner.getName() + " has won the match!");
     }
 
@@ -120,9 +120,9 @@ public class UI {
 
     public boolean askPlayerType(String name) {
         System.out.println("Set control for '" + name + "'\n1. Human\n2. AI");
-        int selection = getIntInput();
         Boolean humanPlayer = null;
         while (humanPlayer == null) {
+            int selection = getIntInput();
 
             if (selection == 1) {
                 humanPlayer = true;
@@ -133,5 +133,9 @@ public class UI {
             }
         }
         return humanPlayer;
+    }
+
+    public void showSelectedStat(Player player, String statName) {
+        System.out.println((player.getName() + " selected " + statName + "\n"));
     }
 }

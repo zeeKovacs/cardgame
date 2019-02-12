@@ -9,6 +9,13 @@ public class GameRound {
     private List<Player> players;
     private GameData gameData;
     private PlayerComparator pc = new PlayerComparator();
+    private boolean isTheGameRunning = true;
+    private Player gameWinner;
+
+
+    public Player getGameWinner() {
+        return gameWinner;
+    }
 
     public GameRound(UI ui, List<Player> players, GameData gameData) {
         this.ui = ui;
@@ -17,26 +24,25 @@ public class GameRound {
     }
 
     public boolean gameRuns() {
-        return true;
+        return isTheGameRunning;
     }
 
     public void run() {
         ui.startRound(players);
         Player startPlayer = players.get(players.size() - 1);
-        pc.setKey(startPlayer.selectStat());
-        // pc.setKey(ui.statToCompare(players.get(players.size() - 1).revealTopCard()));
+        String selectedStat = startPlayer.selectStat();
+        ui.showSelectedStat(startPlayer, gameData.getFieldDescription(selectedStat));
+        pc.setKey(selectedStat);
 
         for (Player player : players) {
             ui.showPlayerCard(player);
         }
         players.sort(pc);
         Player winner = players.get(players.size() - 1);
-        //players.remove(winner);
         for (Player p : players) {
             winner.addCard(p.getAndRemoveTopCard());
         }
         ui.showRoundWinner(winner);
-        //winner.addCard(winner.getHand().next());
         List<Player> losers = new ArrayList<>();
         for (Player player : players) {
             if (player.getHandSize() == 0) {
@@ -56,8 +62,9 @@ public class GameRound {
     }
 
     private void declareWinner(Player player) {
-        ui.gameOver(player);
-        throw new ArrayIndexOutOfBoundsException();
+        ui.ShowGameWinner(player);
+        gameWinner = player;
+        isTheGameRunning = false;
     }
 
 
