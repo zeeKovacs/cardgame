@@ -25,7 +25,7 @@ public class Deck implements Iterator<Card> {
 
     @Override
     public Card next() {
-        Card nextCard = deck.get(deck.size()-1);
+        Card nextCard = deck.get(0);
         deck.remove(nextCard);
         return nextCard;
     }

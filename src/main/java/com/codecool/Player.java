@@ -25,7 +25,7 @@ public class Player {
     }
 
     public Card getNextCard() {
-        return hand.getDeck().get(getHandSize()-1);
+        return hand.getDeck().get(0);
     }
 
     public Deck getHand() {
