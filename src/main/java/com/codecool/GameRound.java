@@ -7,6 +7,7 @@ public class GameRound {
 
     private UI ui;
     private List<Player> players;
+    private List<Player> displayedPlayers = new ArrayList<>();
     private GameData gameData;
     private PlayerComparator pc = new PlayerComparator();
     private boolean isTheGameRunning = true;
@@ -21,6 +22,9 @@ public class GameRound {
     public GameRound(UI ui, List<Player> players, GameData gameData) {
         this.ui = ui;
         this.players = players;
+        for (Player player : players) {
+            this.displayedPlayers.add(player);
+        }
         this.gameData = gameData;
     }
 
@@ -31,7 +35,7 @@ public class GameRound {
     public void run() {
 
         Player startPlayer = players.get(players.size() - 1);
-        ui.showRoundStartInfo(players, startPlayer, roundCounter);
+        ui.showRoundStartInfo(displayedPlayers, startPlayer, roundCounter);
         String selectedStat = startPlayer.selectStat();
         ui.showSelectedStat(startPlayer, gameData.getFieldDescription(selectedStat));
         pc.setKey(selectedStat);
@@ -54,6 +58,7 @@ public class GameRound {
 
         for (Player player : losers) {
             players.remove(player);
+            displayedPlayers.remove(player);
             ui.showLostPlayer(player);
         }
 

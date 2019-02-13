@@ -32,22 +32,23 @@ public class AIPlayer extends Player {
         int size = keySet.size();
         String[] keys = keySet.toArray(new String[size]);
 
-        float[] differencesFromAverage = new float[size];
+        float[] ratio = new float[size];
+
         for (int i = 0; i < keys.length; i++) {
-            float avg = statistics.getAverageByKey(keys[i]);
             float actual = (float) revealTopCard().getStatByKey(keys[i]);
-            differencesFromAverage[i] = actual - avg;
+            float avg = statistics.getAverageByKey(keys[i]);
+            float max = (float) statistics.getMaxByKey(keys[i]);
+            ratio[i] = (actual - avg) / (max - avg);
         }
 
         int maxIndex = 0;
         for (int i = 0; i < size; i++) {
-            if (differencesFromAverage[i] > differencesFromAverage[maxIndex]) {
+            if (ratio[i] > ratio[maxIndex]) {
                 maxIndex = i;
             }
         }
 
         String selection = keys[maxIndex];
-
         return selection;
     }
 

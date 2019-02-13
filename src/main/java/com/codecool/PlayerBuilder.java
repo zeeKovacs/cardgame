@@ -29,7 +29,7 @@ public class PlayerBuilder {
                 player = new AIPlayer(name, 50, statistics);
                 break;
             case "hard":
-                player = new AIPlayer(name, 90, statistics);
+                player = new AIPlayer(name, 100, statistics);
 
 
         }

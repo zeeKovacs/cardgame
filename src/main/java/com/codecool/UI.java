@@ -27,8 +27,8 @@ public class UI {
         return deckTypes.get(intInput - 1);
     }
 
-    String askPlayerName(int serial) {
-        System.out.println("Enter the " + serial + ". player's name!");
+    String askPlayerName(int playerNumber) {
+        System.out.println("Enter the " + playerNumber + ". player's name!");
         return getInput();
     }
 

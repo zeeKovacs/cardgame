@@ -9,7 +9,6 @@ public class GameController {
 
     private Deck deckOnTable;
     private XMLHandler reader;
-    private List<Player> players = new ArrayList<>();
     private UI ui = new UI();
     private GameData gameData;
 
@@ -19,9 +18,9 @@ public class GameController {
         String userInput = ui.getInput().toLowerCase();
         switch (userInput) {
             case "s":
-                initialize();
-                handCards();
-                startGame();
+                List<Player> players = initialize();
+                handCards(players);
+                startGame(players);
                 break;
             case "x":
                 System.exit(1);
@@ -30,9 +29,10 @@ public class GameController {
         }
     }
 
-    private void initialize() {
+    private List<Player> initialize() {
         String deckType = ui.getDeckType(getDeckNames());
         reader = new XMLHandler("src/data/" + deckType + ".xml");
+        List<Player> players = new ArrayList<>();
         reader.load();
         deckOnTable = reader.getDeck();
         deckOnTable.shuffle();
@@ -50,9 +50,10 @@ public class GameController {
 
         }
         Collections.shuffle(players);
+        return players;
     }
 
-    private void handCards() {
+    private void handCards(List<Player> players) {
         while (deckOnTable.hasNext()) {
             for (Player player : players) {
                 if (deckOnTable.hasNext()) {
@@ -62,7 +63,7 @@ public class GameController {
         }
     }
 
-    private void startGame() {
+    private void startGame(List<Player> players) {
         GameRound gameRound = new GameRound(ui, players, gameData);
         while (gameRound.gameRuns()) {
             gameRound.run();

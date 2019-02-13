@@ -13,10 +13,10 @@ public class AronTest {
             StatisticsGenerator statisticsGenerator = new StatisticsGenerator();
             CardStatistics cardStatistics = statisticsGenerator.getAverageCard(deck);
             PlayerBuilder playerBuilder = new PlayerBuilder(new UI(), cardStatistics);
-            Player player = playerBuilder.create("a", "human");
-            System.out.println(deck.getDeck().get(0));
+            Player player = playerBuilder.create("a", "hard");
             player.addDeck(deck);
             player.selectStat();
+            System.out.println("anyád");
 
 
         } catch (XMLLoadError e) {

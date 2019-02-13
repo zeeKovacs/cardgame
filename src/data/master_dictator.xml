@@ -13,7 +13,7 @@ The Master Dictator
     </Fields>
     <Cards>
         <Card name="Robert Mugabe">
-            <cruelty val="67"/>
+            <cruelty val="87"/>
             <casualties val="14"/>
             <reign val="30"/>
             <children val="4"/>
@@ -64,7 +64,7 @@ The Master Dictator
             <cruelty val="76"/>
             <casualties val="67"/>
             <reign val="9"/>
-            <children val="87"/>
+            <children val="8"/>
         </Card>
         <Card name="Kim Il Sung">
             <cruelty val="76"/>
@@ -127,10 +127,10 @@ The Master Dictator
             <children val="2"/>
         </Card>
         <Card name="My Cat">
-            <cruelty val="99"/>
-            <casualties val="99"/>
-            <reign val="99"/>
-            <children val="99"/>
+            <cruelty val="92"/>
+            <casualties val="88"/>
+            <reign val="57"/>
+            <children val="43"/>
         </Card>
         <Card name="William the Conqueror">
             <cruelty val="24"/>
@@ -160,9 +160,9 @@ The Master Dictator
             <cruelty val="63"/>
             <casualties val="67"/>
             <reign val="33"/>
-            <children val="87"/>
+            <children val="3"/>
         </Card>
-        <Card name="Maximilien Robespierre”">
+        <Card name="Maximilien Robespierre">
             <cruelty val="54"/>
             <casualties val="67"/>
             <reign val="33"/>

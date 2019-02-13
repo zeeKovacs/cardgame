@@ -13,6 +13,7 @@ public class StatisticsGenerator {
         Set<String> keys = cards.get(0).getKeySet();
         for (String key : keys) {
             statSum.put(key, 0);
+            statMax.put(key, 0);
         }
         // Get Sum
         for (Card card : cards) {
@@ -22,20 +23,23 @@ public class StatisticsGenerator {
             }
         }
         // Get max
-        /*
+
         for (Card card : cards) {
             for (String key : keys) {
                 int currentCardFieldVal = card.getStatByKey(key);
-                if (currentCardFieldVal > )
+                if (currentCardFieldVal > statMax.get(key)) {
+                    statMax.put(key, currentCardFieldVal);
+                }
             }
         }
-        */
-        CardStatistics average = new CardStatistics();
+
+        CardStatistics statistics = new CardStatistics();
         int deckSize = deck.getSize();
 
         for (String key : keys) {
-            average.addAverageStat(key, statSum.get(key) / (float) deckSize);
+            statistics.addAverageStat(key, statSum.get(key) / (float) deckSize);
+            statistics.addMaxStat(key, statMax.get(key));
         }
-        return average;
+        return statistics;
     }
 }
