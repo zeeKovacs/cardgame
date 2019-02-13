@@ -50,12 +50,12 @@ public class XMLHandler {
                 try {
                     fieldName = docField.getTagName();
                 } catch (NullPointerException e) {
-                    throw new XMLLoadError("Invalid or missing field name at card id: " + String.valueOf(id));
+                    throw new XMLLoadError("Invalid or missing field name at card name: " + String.valueOf(name));
                 }
                 try {
                     fieldValue = Integer.parseInt(docField.getAttribute("val"));
                 } catch (NumberFormatException e) {
-                    throw new XMLLoadError("Invalid field value at card id: " + String.valueOf(id));
+                    throw new XMLLoadError("Invalid field value at card name: " + String.valueOf(name));
                 }
                 card.addStat(fieldName, fieldValue);
             }
@@ -67,6 +67,9 @@ public class XMLHandler {
     private GameData loadGameData() {
         Element docData = (Element) document.getElementsByTagName("Data").item(0);
         String name = docData.getAttribute("name");
+        if (name == "") {
+            throw new XMLLoadError("Missing card set name!");
+        }
         String typeSingular = docData.getAttribute("type_singular");
         String typePlural = docData.getAttribute("type_plural");
         String gameDescription = docData.getTextContent();
@@ -80,6 +83,13 @@ public class XMLHandler {
             Element field = (Element) docFieldList.item(i);
             String id = field.getAttribute("id");
             String description = field.getAttribute("description");
+            if (id == "") {
+                throw new XMLLoadError("Invalid field id declaration in <Fields>");
+            }
+            if (description == "") {
+                throw new XMLLoadError("Invalid field name declaration in <Fields>");
+
+            }
             gameData.addField(id, description);
 
         }
