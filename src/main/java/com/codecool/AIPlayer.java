@@ -1,12 +1,13 @@
 package com.codecool;
 
-import java.util.Collections;
 import java.util.Random;
 import java.util.Set;
 
 public class AIPlayer extends Player {
-    public AIPlayer(String name) {
+    private CardStatistics average;
+    public AIPlayer(String name, CardStatistics average) {
         super(name);
+        this.average = average;
     }
 
     @Override

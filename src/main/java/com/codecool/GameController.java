@@ -38,7 +38,7 @@ public class GameController {
         gameData = reader.getGameData();
         ui.showGameInstructions(gameData);
         StatisticsGenerator statisticsGenerator = new StatisticsGenerator();
-        Statistics average = statisticsGenerator.getAverageCard(deckOnTable);
+        CardStatistics average = statisticsGenerator.getAverageCard(deckOnTable);
         PlayerBuilder playerBuilder = new PlayerBuilder(ui, average);
 
         int playerNumber = ui.getPlayerNumber();
