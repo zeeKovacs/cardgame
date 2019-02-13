@@ -11,7 +11,6 @@ public class GameController {
     private List<Player> players = new ArrayList<>();
     private UI ui = new UI();
     private GameData gameData;
-    private PlayerBuilder playerBuilder = new PlayerBuilder(ui);
 
 
     public void mainMenu() {
@@ -38,6 +37,9 @@ public class GameController {
         deckOnTable.shuffle();
         gameData = reader.getGameData();
         ui.showGameInstructions(gameData);
+        StatisticsGenerator statisticsGenerator = new StatisticsGenerator();
+        Card average = statisticsGenerator.getAverageCard(deckOnTable);
+        PlayerBuilder playerBuilder = new PlayerBuilder(ui, average);
 
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {

@@ -16,6 +16,10 @@ public class Card{
        this.name = name;
     }
 
+    public Card() {
+
+    }
+
     public String getName() {
         return name;
     }

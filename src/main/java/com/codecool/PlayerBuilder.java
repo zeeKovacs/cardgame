@@ -5,9 +5,11 @@ public class PlayerBuilder {
     Builds AI or HUuman players based on input given. Needs an UI instance for human player instantiation
      */
     private UI ui;
+    private Card averageCard;
 
-    public PlayerBuilder(UI ui) {
+    public PlayerBuilder(UI ui, Card averageCard) {
         this.ui = ui;
+        this.averageCard = averageCard;
     }
 
     public Player create(String name, boolean human) {
