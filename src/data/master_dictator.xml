@@ -164,8 +164,8 @@ The Master Dictator
         </Card>
         <Card name="Maximilien Robespierre">
             <cruelty val="54"/>
-            <casualties val="67"/>
-            <reign val="33"/>
+            <casualties val="23"/>
+            <reign val="1"/>
             <children val="0"/>
         </Card>
     </Cards>
