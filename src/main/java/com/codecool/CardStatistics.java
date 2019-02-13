@@ -5,34 +5,28 @@ import java.util.Map;
 
 public class CardStatistics {
     private Map<String, Float> average = new HashMap<>();
-    private Map<String, Float> max = new HashMap<>();
-    private Map<String, Float> min = new HashMap<>();
+    private Map<String, Integer> max = new HashMap<>();
 
 
     public float getAverageByKey(String key) {
         return average.get(key);
     }
 
-    public float getMaxByKey(String key) {
+    public int getMaxByKey(String key) {
         return max.get(key);
     }
 
-    public float getMinByKey(String key) {
-        return min.get(key);
-    }
 
 
     public void addAverageStat(String key, float value) {
         average.put(key, value);
     }
 
-    public void addMaxStat(String key, float value) {
+    public void addMaxStat(String key, int value) {
         max.put(key, value);
     }
 
-    public void addMinStat(String key, float value) {
-        min.put(key, value);
-    }
+
 
     public String toString() {
         String str = "";

@@ -18,7 +18,7 @@ public class AIPlayer extends Player {
 
     @Override
     public String selectStat() {
-        //delay();
+        delay();
         if (random.nextInt(100) < proficiency) {
             return selectBestStat();
         } else {
