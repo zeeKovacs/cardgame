@@ -1,24 +1,39 @@
 package com.codecool;
 
+import java.util.Random;
+
 public class PlayerBuilder {
     /*
-    Builds AI or HUuman players based on input given. Needs an UI instance for human player instantiation
+        Builds AI or Human players based on input given. Needs an UI instance for human player instantiation
+        and a CardStatistics instance for ai instantiation.
      */
     private UI ui;
-    private CardStatistics averageCard;
+    private CardStatistics statistics;
 
-    public PlayerBuilder(UI ui, CardStatistics averageCard) {
+    public PlayerBuilder(UI ui, CardStatistics statistics) {
         this.ui = ui;
-        this.averageCard = averageCard;
+        this.statistics = statistics;
     }
 
-    public Player create(String name, boolean human) {
-        Player player;
-        if (human) {
-            player = new HumanPlayer(ui, name);
-        } else {
-            player = new AIPlayer(name, averageCard);
+    public Player create(String name, String type) {
+        Player player = null;
+
+        switch(type) {
+            case "human":
+                player = new HumanPlayer(ui, name);
+                break;
+            case "easy":
+                player = new AIPlayer(name, 0, statistics);
+                break;
+            case "medium":
+                player = new AIPlayer(name, 50, statistics);
+                break;
+            case "hard":
+                player = new AIPlayer(name, 90, statistics);
+
+
         }
+
         return player;
     }
 }

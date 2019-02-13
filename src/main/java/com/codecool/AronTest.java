@@ -13,7 +13,8 @@ public class AronTest {
             StatisticsGenerator statisticsGenerator = new StatisticsGenerator();
             CardStatistics cardStatistics = statisticsGenerator.getAverageCard(deck);
             PlayerBuilder playerBuilder = new PlayerBuilder(new UI(), cardStatistics);
-            Player player = playerBuilder.create("a", false);
+            Player player = playerBuilder.create("a", "human");
+            System.out.println(deck.getDeck().get(0));
             player.addDeck(deck);
             player.selectStat();
 

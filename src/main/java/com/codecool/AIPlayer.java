@@ -1,19 +1,32 @@
 package com.codecool;
 
-import java.util.Scanner;
+import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
 
 public class AIPlayer extends Player {
     private CardStatistics statistics;
-    private int delay = 3000;
-    public AIPlayer(String name, CardStatistics statistics) {
+    private int delayTime = 3000;
+    private int proficiency;
+    private Random random = new Random();
+
+    public AIPlayer(String name, int proficiency, CardStatistics statistics) {
         super(name);
         this.statistics = statistics;
+        this.proficiency = proficiency;
     }
 
     @Override
     public String selectStat() {
+        //delay();
+        if (random.nextInt(100) < proficiency) {
+            return selectBestStat();
+        } else {
+            return selectRandomStat();
+        }
+    }
+
+    private String selectBestStat() {
         Card card = revealTopCard();
         Set<String> keySet = card.getKeySet();
         int size = keySet.size();
@@ -34,24 +47,27 @@ public class AIPlayer extends Player {
         }
 
         String selection = keys[maxIndex];
+
+        return selection;
+    }
+
+    private void delay() {
         Timer timer = new Timer();
         try {
-            Thread.sleep(delay);
+            Thread.sleep(delayTime);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
 
-        return selection;
     }
-    /*
-        public String selectStat() {
-            Card card = revealTopCard();
-            Set<String> keySet = card.getKeySet();
-            String[] keys = keySet.toArray(new String[keySet.size()]);
-            Random random = new Random();
-            int selection = random.nextInt(keys.length);
-            return keys[selection];
 
-        }
-     */
+    private String selectRandomStat() {
+        Card card = revealTopCard();
+        Set<String> keySet = card.getKeySet();
+        String[] keys = keySet.toArray(new String[keySet.size()]);
+        int selection = random.nextInt(keys.length);
+        return keys[selection];
+
+    }
+
 }

@@ -2,6 +2,7 @@ package com.codecool;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GameController {
@@ -44,10 +45,11 @@ public class GameController {
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {
             String name = ui.askPlayerName(i + 1);
-            boolean playerIsHuman = ui.askPlayerType(name);
-            players.add(playerBuilder.create(name, playerIsHuman));
+            String player = ui.askPlayerType(name);
+            players.add(playerBuilder.create(name, player));
 
         }
+        Collections.shuffle(players);
     }
 
     private void handCards() {

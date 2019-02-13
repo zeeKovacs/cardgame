@@ -17,7 +17,6 @@ public class Card{
     }
 
     public Card() {
-
     }
 
     public String getName() {
@@ -38,13 +37,13 @@ public class Card{
 
     @Override
     public String toString() {
-        String toPrint = "+~~~~~~~~~~~~~~~~~~~~~~+\n" +
-                         String.format("| %-15s (%2d) |", name, id) +
-                         "\no~~~~~~~~~~~~~~~~~~~~~~o";
+        String toPrint = "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
+                         String.format("| %-25s (%2d) |", name, id) +
+                         "\no~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~o";
         for (String key : stats.keySet()) {
-            toPrint += String.format("\n| %-15s %4d |" , key, stats.get(key));
+            toPrint += String.format("\n| %-25s %4d |" , key, stats.get(key));
         }
-        toPrint += "\n+~~~~~~~~~~~~~~~~~~~~~~+";
+        toPrint += "\n+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+";
         return toPrint;
     }
 }

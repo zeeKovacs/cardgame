@@ -120,21 +120,25 @@ public class UI {
         System.out.println(player.getName() + " has lost the game.\n");
     }
 
-    public boolean askPlayerType(String name) {
-        System.out.println("Set control for '" + name + "'\n1. Human\n2. AI");
-        Boolean humanPlayer = null;
-        while (humanPlayer == null) {
+    public String askPlayerType(String name) {
+        System.out.println("Set control for '" + name + "'\n1. Human\n2. Easy AI\n3. Medium AI\n4. Hard AI");
+        String player = null;
+        while (player == null) {
             int selection = getIntInput();
 
             if (selection == 1) {
-                humanPlayer = true;
+                player = "human";
             } else if (selection == 2){
-                humanPlayer = false;
-            } else {
+                player = "easy";
+            } else if (selection == 3){
+                player = "medium";
+            } else if (selection == 4){
+                player = "hard";
+            } else{
                 System.out.println("Invalid number given!");
             }
         }
-        return humanPlayer;
+        return player;
     }
 
     public void showSelectedStat(Player player, String statName) {
