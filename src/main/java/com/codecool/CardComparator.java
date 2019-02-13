@@ -6,7 +6,8 @@ public class CardComparator implements Comparator<Card> {
 
     private String key;
 
-    CardComparator() {}
+    CardComparator() {
+    }
 
     CardComparator(String key) {
         this.key = key;

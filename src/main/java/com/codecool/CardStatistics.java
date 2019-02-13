@@ -17,7 +17,6 @@ public class CardStatistics {
     }
 
 
-
     public void addAverageStat(String key, float value) {
         average.put(key, value);
     }
@@ -25,7 +24,6 @@ public class CardStatistics {
     public void addMaxStat(String key, int value) {
         max.put(key, value);
     }
-
 
 
     public String toString() {

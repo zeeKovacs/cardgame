@@ -5,15 +5,15 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Card{
+public class Card {
 
     int id;
     private String name;
     private Map<String, Integer> stats = new HashMap<>();
 
     public Card(int id, String name) {
-       this.id = id;
-       this.name = name;
+        this.id = id;
+        this.name = name;
     }
 
     public Card() {
@@ -38,10 +38,10 @@ public class Card{
     @Override
     public String toString() {
         String toPrint = "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
-                         String.format("| %-25s (%2d) |", name, id) +
-                         "\no~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~o";
+                String.format("| %-25s (%2d) |", name, id) +
+                "\no~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~o";
         for (String key : stats.keySet()) {
-            toPrint += String.format("\n| %-25s %4d |" , key, stats.get(key));
+            toPrint += String.format("\n| %-25s %4d |", key, stats.get(key));
         }
         toPrint += "\n+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+";
         return toPrint;

@@ -11,9 +11,9 @@ public class UI {
     public void printMainMenu() {
         clearTerminal();
         System.out.println("+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
-                           "|  Welcome to Cool Custom Card Game! |\n" +
-                           "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
-                           "\\Press 'S' to start or 'X' to exit!\\");
+                "|  Welcome to Cool Custom Card Game! |\n" +
+                "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
+                "\\Press 'S' to start or 'X' to exit!\\");
     }
 
     String getDeckType(List<String> deckTypes) {
@@ -46,7 +46,7 @@ public class UI {
         Set fields = card.getKeySet();
         List<String> fieldsList = new ArrayList<>();
         System.out.println(card + "\n\n===================================================" +
-                                "\nChoose which stat of the cards you want to compare!");
+                "\nChoose which stat of the cards you want to compare!");
         for (Object field : fields) {
             fieldsList.add((String) field);
         }
@@ -93,11 +93,11 @@ public class UI {
         System.out.println("It's " + startPlayer.getName() + "'s selection turn.");
     }
 
-   public void showPlayerCard(Player player) {
+    public void showPlayerCard(Player player) {
 
         System.out.println(player.getName() + " has");
         System.out.println(player.revealTopCard() + "\n");
-   }
+    }
 
     void showRoundWinner(Player winner) {
         clearTerminal();
@@ -128,13 +128,13 @@ public class UI {
 
             if (selection == 1) {
                 player = "human";
-            } else if (selection == 2){
+            } else if (selection == 2) {
                 player = "easy";
-            } else if (selection == 3){
+            } else if (selection == 3) {
                 player = "medium";
-            } else if (selection == 4){
+            } else if (selection == 4) {
                 player = "hard";
-            } else{
+            } else {
                 System.out.println("Invalid number given!");
             }
         }

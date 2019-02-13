@@ -1,7 +1,6 @@
 package com.codecool;
 
 
-
 public abstract class Player {
 
     String name;

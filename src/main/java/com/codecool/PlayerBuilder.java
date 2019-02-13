@@ -18,7 +18,7 @@ public class PlayerBuilder {
     public Player create(String name, String type) {
         Player player = null;
 
-        switch(type) {
+        switch (type) {
             case "human":
                 player = new HumanPlayer(ui, name);
                 break;
