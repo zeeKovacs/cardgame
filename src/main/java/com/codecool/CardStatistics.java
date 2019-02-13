@@ -4,20 +4,40 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CardStatistics {
-    private Map<String, Float> data = new HashMap<>();
+    private Map<String, Float> average = new HashMap<>();
+    private Map<String, Float> max = new HashMap<>();
+    private Map<String, Float> min = new HashMap<>();
 
-    public float getStatByKey(String key) {
-        return data.get(key);
+
+    public float getAverageByKey(String key) {
+        return average.get(key);
     }
 
-    public void addStat(String key, float value) {
-        data.put(key, value);
+    public float getMaxByKey(String key) {
+        return max.get(key);
+    }
+
+    public float getMinByKey(String key) {
+        return min.get(key);
+    }
+
+
+    public void addAverageStat(String key, float value) {
+        average.put(key, value);
+    }
+
+    public void addMaxStat(String key, float value) {
+        max.put(key, value);
+    }
+
+    public void addMinStat(String key, float value) {
+        min.put(key, value);
     }
 
     public String toString() {
         String str = "";
-        for (String key : data.keySet()) {
-            str += key + " " + Float.toString(data.get(key)) + "\n";
+        for (String key : average.keySet()) {
+            str += key + " " + Float.toString(average.get(key)) + "\n";
         }
         return str;
     }

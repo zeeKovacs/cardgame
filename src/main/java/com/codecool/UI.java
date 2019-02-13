@@ -85,10 +85,12 @@ public class UI {
         }
     }
 
-    void startRound(List<Player> players) {
+    void showRoundStartInfo(List<Player> players, Player startPlayer, int roundNum) {
+        System.out.println("-------------------------- Round " + Integer.toString(roundNum) + " -----------------------");
         for (Player p : players) {
             System.out.println(p.getName() + " has " + p.getHandSize() + " cards in hand");
         }
+        System.out.println("It's " + startPlayer.getName() + "'s selection turn.");
     }
 
    public void showPlayerCard(Player player) {
@@ -99,7 +101,7 @@ public class UI {
 
     void showRoundWinner(Player winner) {
         clearTerminal();
-        System.out.println(winner.getName() + " has won the round. It's his/her turn now!");
+        System.out.println(winner.getName() + " has won the round.");
     }
 
     public void ShowGameWinner(Player winner) {

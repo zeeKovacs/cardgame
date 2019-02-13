@@ -39,4 +39,8 @@ public abstract class Player {
         hand.getDeck().remove(card);
         return card;
     }
+
+    public void addDeck(Deck deck) {
+        this.hand = deck;
+    }
 }

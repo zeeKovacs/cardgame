@@ -24,8 +24,8 @@ public class StatisticsGenerator {
         int deckSize = deck.getSize();
 
         for (String key : keys) {
-            average.addStat(key, statSum.get(key) / (float) deckSize);
+            average.addAverageStat(key, statSum.get(key) / (float) deckSize);
         }
-        return new CardStatistics();
+        return average;
     }
 }

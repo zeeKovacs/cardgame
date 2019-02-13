@@ -11,6 +11,7 @@ public class GameRound {
     private PlayerComparator pc = new PlayerComparator();
     private boolean isTheGameRunning = true;
     private Player gameWinner;
+    private int roundCounter = 1;
 
 
     public Player getGameWinner() {
@@ -28,8 +29,9 @@ public class GameRound {
     }
 
     public void run() {
-        ui.startRound(players);
+
         Player startPlayer = players.get(players.size() - 1);
+        ui.showRoundStartInfo(players, startPlayer, roundCounter);
         String selectedStat = startPlayer.selectStat();
         ui.showSelectedStat(startPlayer, gameData.getFieldDescription(selectedStat));
         pc.setKey(selectedStat);
@@ -59,6 +61,7 @@ public class GameRound {
 
             declareWinner(players.get(0));
         }
+        roundCounter++;
     }
 
     private void declareWinner(Player player) {

@@ -10,14 +10,12 @@ public class AronTest {
             handler.load();
             Deck deck = handler.getDeck();
             GameData gameData = handler.getGameData();
-            System.out.println(gameData);
-            System.out.println(deck.getDeck().get(1).getName());
-
-
-            Card c2 = deck.getDeck().get(1);
-            Comparator<Card> comp = new CardComparator("cruelty");
-            deck.getDeck().sort(comp);
-            System.out.println(deck);
+            StatisticsGenerator statisticsGenerator = new StatisticsGenerator();
+            CardStatistics cardStatistics = statisticsGenerator.getAverageCard(deck);
+            PlayerBuilder playerBuilder = new PlayerBuilder(new UI(), cardStatistics);
+            Player player = playerBuilder.create("a", false);
+            player.addDeck(deck);
+            player.selectStat();
 
 
         } catch (XMLLoadError e) {
