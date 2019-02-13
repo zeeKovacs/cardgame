@@ -42,4 +42,8 @@ public class Deck implements Iterator<Card> {
         }
         return str;
     }
+
+    public int getSize() {
+        return deck.size();
+    }
 }

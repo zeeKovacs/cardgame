@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class StatisticsGenerator {
-    public Card getAverageCard(Deck deck){
+    public Statistics getAverageCard(Deck deck){
         List<Card> cards = deck.getDeck();
         Map<String, Integer> statSum = new HashMap<>();
         Set<String> keys = cards.get(0).getKeySet();
@@ -15,8 +15,21 @@ public class StatisticsGenerator {
         }
 
         for (Card card : cards) {
-
+            for (String key : keys) {
+                int currentCardVal = card.getStatByKey(key);
+                statSum.put(key, statSum.get(key) + currentCardVal);
+            }
         }
-        return new Card();
+        Statistics average = new Statistics();
+        int deckSize = deck.getSize();
+
+        for (String key : keys) {
+            //System.out.println(key);
+            System.out.println(Float.intBitsToFloat(deckSize));
+            //System.out.println(statSum.get(key) / deckSize);
+           // average.addStat(key, statSum.get(key) / deckSize);
+        }
+
+        return new Statistics();
     }
 }

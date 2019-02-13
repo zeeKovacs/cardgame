@@ -31,7 +31,7 @@ The Master Dictator
             <children val="6"/>
         </Card>
         <Card name="Idi Amin Dada">
-            <cruelty val="67"/>
+            <cruelty val="45"/>
             <casualties val="76"/>
             <reign val="6"/>
             <children val="43"/>
@@ -73,7 +73,7 @@ The Master Dictator
             <children val="6"/>
         </Card>
         <Card name="Saddam Hussein">
-            <cruelty val="76"/>
+            <cruelty val="75"/>
             <casualties val="67"/>
             <reign val="34"/>
             <children val="5"/>
@@ -97,7 +97,7 @@ The Master Dictator
             <children val="0"/>
         </Card>
         <Card name="Benito Mussolini">
-            <cruelty val="76"/>
+            <cruelty val="78"/>
             <casualties val="67"/>
             <reign val="33"/>
             <children val="6"/>
@@ -121,7 +121,7 @@ The Master Dictator
             <children val="3"/>
         </Card>
         <Card name="Commodus">
-            <cruelty val="61"/>
+            <cruelty val="51"/>
             <casualties val="23"/>
             <reign val="15"/>
             <children val="2"/>
@@ -145,7 +145,7 @@ The Master Dictator
             <children val="16"/>
         </Card>
         <Card name="Edward I">
-            <cruelty val="76"/>
+            <cruelty val="46"/>
             <casualties val="67"/>
             <reign val="35"/>
             <children val="17"/>
@@ -157,13 +157,13 @@ The Master Dictator
             <children val="9"/>
         </Card>
         <Card name="Ivan IV: “the Terrible”">
-            <cruelty val="76"/>
+            <cruelty val="63"/>
             <casualties val="67"/>
             <reign val="33"/>
             <children val="87"/>
         </Card>
         <Card name="Maximilien Robespierre”">
-            <cruelty val="76"/>
+            <cruelty val="54"/>
             <casualties val="67"/>
             <reign val="33"/>
             <children val="0"/>
