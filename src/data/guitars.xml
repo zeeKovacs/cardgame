@@ -1,5 +1,5 @@
 <Card_set>
-    <Data name="Guitar ground" type_singular="Guitar" type_plural="Guitars"/>
+    <Data name="Guitar Ground" type_singular="Guitar" type_plural="Guitars"/>
     <Cards>
         <Card name="Stratocaster">
             <Pickups val="3"/>
