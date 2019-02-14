@@ -10,7 +10,7 @@ public class GameController {
     private Deck deckOnTable;
     private UI ui = new UI();
     private GameData gameData;
-    
+
     public void mainMenu() {
         ui.printMainMenu();
         String userInput = ui.getInput().toLowerCase();
