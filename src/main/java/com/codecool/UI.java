@@ -144,4 +144,8 @@ public class UI {
     public void showSelectedStat(Player player, String statName) {
         System.out.println((player.getName() + " selected " + statName + "\n"));
     }
+
+    public void printMessage(String msg) {
+        System.out.println(msg);
+    }
 }

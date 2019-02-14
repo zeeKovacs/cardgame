@@ -23,12 +23,21 @@ public class XMLHandler {
         this.filepath = filepath;
     }
 
+    public XMLHandler() {
+
+    }
+
     public GameData getGameData() {
         return gameData;
     }
 
     public Deck getDeck() {
         return deck;
+    }
+
+    public void load(String filepath) {
+        this.filepath = filepath;
+        load();
     }
 
     public void load() throws XMLLoadError {
@@ -42,6 +51,9 @@ public class XMLHandler {
         for (int i = 0; i < docCardList.getLength(); i++) {
             Element docCard = (Element) docCardList.item(i);
             String name = docCard.getAttribute("name");
+            if (name == "") {
+                throw new XMLLoadError("Invalid name declaration at card no. " + Integer.toString(i + 1));
+            }
             Card card = new Card(id, name);
             for (String field : fields) {
                 Element docField = (Element) docCard.getElementsByTagName(field).item(0);

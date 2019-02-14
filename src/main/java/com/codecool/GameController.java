@@ -8,7 +8,6 @@ import java.util.List;
 public class GameController {
 
     private Deck deckOnTable;
-    private XMLHandler reader;
     private UI ui = new UI();
     private GameData gameData;
 
@@ -30,10 +29,20 @@ public class GameController {
     }
 
     private List<Player> initialize() {
-        String deckType = ui.getDeckType(getDeckNames());
-        reader = new XMLHandler("src/data/" + deckType + ".xml");
+        boolean succesfulDeckLoad = false;
+        XMLHandler reader = new XMLHandler();
+        while (!succesfulDeckLoad) {
+            try {
+                String deckType = ui.getDeckType(getDeckNames());
+                reader.load("src/data/" + deckType + ".xml");
+                succesfulDeckLoad = true;
+            } catch (XMLLoadError e) {
+                ui.printMessage("\nCard Deck loading error!");
+                ui.printMessage(e.getMessage());
+                ui.printMessage("Fix your deck file or choose another one.\n");
+            }
+        }
         List<Player> players = new ArrayList<>();
-        reader.load();
         deckOnTable = reader.getDeck();
         deckOnTable.shuffle();
         gameData = reader.getGameData();
