@@ -48,8 +48,7 @@ public class AIPlayer extends Player {
             }
         }
 
-        String selection = keys[maxIndex];
-        return selection;
+        return keys[maxIndex];
     }
 
     private void delay() {

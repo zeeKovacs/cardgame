@@ -76,7 +76,7 @@ public class XMLHandler {
         }
     }
 
-    private GameData loadGameData() {
+    private void loadGameData() {
         Element docData = (Element) document.getElementsByTagName("Data").item(0);
         String name = docData.getAttribute("name");
         if (name == "") {
@@ -105,8 +105,6 @@ public class XMLHandler {
             gameData.addField(id, description);
 
         }
-
-        return gameData;
     }
 
     private void getDocument() throws XMLLoadError {

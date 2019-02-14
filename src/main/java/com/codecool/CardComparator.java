@@ -9,16 +9,8 @@ public class CardComparator implements Comparator<Card> {
     CardComparator() {
     }
 
-    CardComparator(String key) {
-        this.key = key;
-    }
-
     void setKey(String key) {
         this.key = key;
-    }
-
-    String getKey() {
-        return this.key;
     }
 
     @Override

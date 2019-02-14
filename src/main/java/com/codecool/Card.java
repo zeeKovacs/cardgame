@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Card {
 
-    int id;
+    private int id;
     private String name;
     private Map<String, Integer> stats = new HashMap<>();
 

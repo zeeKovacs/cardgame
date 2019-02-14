@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class PlayerComparator implements Comparator<Player> {
 
-    CardComparator cp = new CardComparator();
+    private CardComparator cp = new CardComparator();
 
     void setKey(String key) {
         cp.setKey(key);
