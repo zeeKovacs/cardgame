@@ -100,7 +100,7 @@ public class UI {
     }
 
     void showRoundWinner(Player winner) {
-        clearTerminal();
+        clearTerminal();gameData
         System.out.println(winner.getName() + " has won the round.");
     }
 

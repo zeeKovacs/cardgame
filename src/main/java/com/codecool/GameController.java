@@ -10,8 +10,7 @@ public class GameController {
     private Deck deckOnTable;
     private UI ui = new UI();
     private GameData gameData;
-
-
+    
     public void mainMenu() {
         ui.printMainMenu();
         String userInput = ui.getInput().toLowerCase();
@@ -49,13 +48,13 @@ public class GameController {
         ui.showGameInstructions(gameData);
         StatisticsGenerator statisticsGenerator = new StatisticsGenerator();
         CardStatistics average = statisticsGenerator.getAverageCard(deckOnTable);
-        PlayerBuilder playerBuilder = new PlayerBuilder(ui, average);
+        PlayerCreator playerCreator = new PlayerCreator(ui, average);
 
         int playerNumber = ui.getPlayerNumber();
         for (int i = 0; i < playerNumber; i++) {
             String name = ui.askPlayerName(i + 1);
             String player = ui.askPlayerType(name);
-            players.add(playerBuilder.create(name, player));
+            players.add(playerCreator.create(name, player));
 
         }
         Collections.shuffle(players);

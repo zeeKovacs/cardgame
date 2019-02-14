@@ -2,7 +2,7 @@ package com.codecool;
 
 import java.util.Random;
 
-public class PlayerBuilder {
+public class PlayerCreator {
     /*
         Builds AI or Human players based on input given. Needs an UI instance for human player instantiation
         and a CardStatistics instance for ai instantiation.
@@ -10,7 +10,7 @@ public class PlayerBuilder {
     private UI ui;
     private CardStatistics statistics;
 
-    public PlayerBuilder(UI ui, CardStatistics statistics) {
+    public PlayerCreator(UI ui, CardStatistics statistics) {
         this.ui = ui;
         this.statistics = statistics;
     }
