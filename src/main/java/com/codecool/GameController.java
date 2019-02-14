@@ -29,13 +29,13 @@ public class GameController {
     }
 
     private List<Player> initialize() {
-        boolean succesfulDeckLoad = false;
+        boolean successfulDeckLoad = false;
         XMLHandler reader = new XMLHandler();
-        while (!succesfulDeckLoad) {
+        while (!successfulDeckLoad) {
             try {
                 String deckType = ui.getDeckType(getDeckNames());
                 reader.load("src/data/" + deckType + ".xml");
-                succesfulDeckLoad = true;
+                successfulDeckLoad = true;
             } catch (XMLLoadError e) {
                 ui.printMessage("\nCard Deck loading error!");
                 ui.printMessage(e.getMessage());
