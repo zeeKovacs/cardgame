@@ -10,9 +10,9 @@ public class UI {
 
     public void printMainMenu() {
         clearTerminal();
-        System.out.println("+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
-                "|  Welcome to Cool Custom Card Game! |\n" +
-                "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
+        System.out.println("+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
+                "|  Welcome to Custom Card Game! |\n" +
+                "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\n" +
                 "\\Press 'S' to start or 'X' to exit!\\");
     }
 
@@ -33,9 +33,9 @@ public class UI {
     }
 
     int getPlayerNumber() {
-        System.out.println("Enter the number of players! (1-4)");
+        System.out.println("Enter the number of players! (2-4)");
         intInput = getIntInput();
-        while (intInput < 0 || intInput > 4) {
+        while (intInput < 2 || intInput > 4) {
             System.out.println("Please enter a valid number.");
             intInput = getIntInput();
         }
